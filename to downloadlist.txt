@@ -1,0 +1,180 @@
+materials/darkerz_mapper/ze_pirates_xmas_stripper/bottle/bottle.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/bottle/bottle.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/candy/candy.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/candy/candy.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/correction/blue.raw
+materials/darkerz_mapper/ze_pirates_xmas_stripper/correction/dark.raw
+materials/darkerz_mapper/ze_pirates_xmas_stripper/correction/glitch.raw
+materials/darkerz_mapper/ze_pirates_xmas_stripper/crystall/ice.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/firework/firework.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/firework/firework.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/firework/firework_head.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/firework/firework_head.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/firework/firework_head_alterntive.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/firework/firework_head_alterntive.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/giftbox/box1.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/giftbox/box1.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/giftbox/box1_bump.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/giftbox/box2.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/giftbox/box2.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/giftbox/box2_bump.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/giftbox/box3.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/giftbox/box3.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/giftbox/box3_bump.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/giftbox/ribbon1.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/giftbox/ribbon1.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/giftbox/ribbon1_bump.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/giftbox/ribbon2.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/giftbox/ribbon2.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/giftbox/ribbon2_bump.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/icewall/ice.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/icewall/ice.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/laser/laser.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/laser/laser.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/overlay/drug_1.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/overlay/drug_1.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/santa/ci_burning.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/santa/coach_head_wrp.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/santa/hulk_01.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/santa/santa_tank_color.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/santa/santa_tank_normal.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/santatrue/santatrue.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/santatrue/santatrue.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/snowbaby/clothwarp.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/snowbaby/mt_body3605_hq.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/snowbaby/mt_chr0268_3605_hq.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/snowbaby/mt_chr0268_3605_mayu_hq.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/snowbaby/mt_chr0268_3605_obj_hq.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/snowbaby/normal.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/snowbaby/tx_body3605_hq.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/snowbaby/tx_chr0268_3605_hq.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/snowbaby/tx_chr0268_3605_obj_hq.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/snowmaiden/clothwarp.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/snowmaiden/mt_body3058_hq.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/snowmaiden/mt_chr0300_3058_hq.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/snowmaiden/mt_chr0300_3058_mayu_hq.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/snowmaiden/mt_chr0300_3058_obj_hq.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/snowmaiden/normal.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/snowmaiden/tx_body3058_hq.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/snowmaiden/tx_chr0300_3058_hq.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/snowmaiden/tx_chr0300_3058_obj_hq.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/sprites/sphere.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/sprites/sphere.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/star/star_tex.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/star/star_tex.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/decoballs.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/decoballs.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/decoballs_detail.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/decoballs_n.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/gold.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/gold.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/gold2.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/gold2.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/green.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/lightwarp_hair.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/lightwarp_soft_white.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/Needles_Dif.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/Needles_Dif.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/Needles_Dif_n.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/softsilver.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/Tinsel_01.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/Tinsel_01.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/Tinsel_01_N.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/tree_wood.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/tree_wood.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/tree_wood_n.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree1/weapon_lightwarp.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree2/christmastree_deco_diff.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree2/christmastree_deco_diff.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree2/christmastree_deco_norm.vtf
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree2/npc_christmastree_01_diff.vmt
+materials/darkerz_mapper/ze_pirates_xmas_stripper/tree2/npc_christmastree_01_diff.vtf
+materials/skybox/ze_pirates_xmas_stripper/tealspacebk.vmt
+materials/skybox/ze_pirates_xmas_stripper/tealspacebk.vtf
+materials/skybox/ze_pirates_xmas_stripper/tealspacedn.vmt
+materials/skybox/ze_pirates_xmas_stripper/tealspacedn.vtf
+materials/skybox/ze_pirates_xmas_stripper/tealspaceft.vmt
+materials/skybox/ze_pirates_xmas_stripper/tealspaceft.vtf
+materials/skybox/ze_pirates_xmas_stripper/tealspacelf.vmt
+materials/skybox/ze_pirates_xmas_stripper/tealspacelf.vtf
+materials/skybox/ze_pirates_xmas_stripper/tealspacert.vmt
+materials/skybox/ze_pirates_xmas_stripper/tealspacert.vtf
+materials/skybox/ze_pirates_xmas_stripper/tealspaceup.vmt
+materials/skybox/ze_pirates_xmas_stripper/tealspaceup.vtf
+
+models/darkerz_mapper/ze_pirates_xmas_stripper/bottle.dx90.vtx
+models/darkerz_mapper/ze_pirates_xmas_stripper/bottle.mdl
+models/darkerz_mapper/ze_pirates_xmas_stripper/bottle.vvd
+models/darkerz_mapper/ze_pirates_xmas_stripper/candy.dx90.vtx
+models/darkerz_mapper/ze_pirates_xmas_stripper/candy.mdl
+models/darkerz_mapper/ze_pirates_xmas_stripper/candy.phy
+models/darkerz_mapper/ze_pirates_xmas_stripper/candy.vvd
+models/darkerz_mapper/ze_pirates_xmas_stripper/crystall.dx90.vtx
+models/darkerz_mapper/ze_pirates_xmas_stripper/crystall.mdl
+models/darkerz_mapper/ze_pirates_xmas_stripper/crystall.vvd
+models/darkerz_mapper/ze_pirates_xmas_stripper/firework.dx90.vtx
+models/darkerz_mapper/ze_pirates_xmas_stripper/firework.mdl
+models/darkerz_mapper/ze_pirates_xmas_stripper/firework.phy
+models/darkerz_mapper/ze_pirates_xmas_stripper/firework.vvd
+models/darkerz_mapper/ze_pirates_xmas_stripper/giftbox.dx90.vtx
+models/darkerz_mapper/ze_pirates_xmas_stripper/giftbox.mdl
+models/darkerz_mapper/ze_pirates_xmas_stripper/giftbox.vvd
+models/darkerz_mapper/ze_pirates_xmas_stripper/giftbox_bomb.dx90.vtx
+models/darkerz_mapper/ze_pirates_xmas_stripper/giftbox_bomb.mdl
+models/darkerz_mapper/ze_pirates_xmas_stripper/giftbox_bomb.vvd
+models/darkerz_mapper/ze_pirates_xmas_stripper/icewall.dx90.vtx
+models/darkerz_mapper/ze_pirates_xmas_stripper/icewall.mdl
+models/darkerz_mapper/ze_pirates_xmas_stripper/icewall.phy
+models/darkerz_mapper/ze_pirates_xmas_stripper/icewall.vvd
+models/darkerz_mapper/ze_pirates_xmas_stripper/laser.dx90.vtx
+models/darkerz_mapper/ze_pirates_xmas_stripper/laser.mdl
+models/darkerz_mapper/ze_pirates_xmas_stripper/laser.vvd
+models/darkerz_mapper/ze_pirates_xmas_stripper/luff_santatrue.dx90.vtx
+models/darkerz_mapper/ze_pirates_xmas_stripper/luff_santatrue.mdl
+models/darkerz_mapper/ze_pirates_xmas_stripper/luff_santatrue.vvd
+models/darkerz_mapper/ze_pirates_xmas_stripper/santa.dx90.vtx
+models/darkerz_mapper/ze_pirates_xmas_stripper/santa.mdl
+models/darkerz_mapper/ze_pirates_xmas_stripper/santa.vvd
+models/darkerz_mapper/ze_pirates_xmas_stripper/snowbaby.dx90.vtx
+models/darkerz_mapper/ze_pirates_xmas_stripper/snowbaby.mdl
+models/darkerz_mapper/ze_pirates_xmas_stripper/snowbaby.vvd
+models/darkerz_mapper/ze_pirates_xmas_stripper/snowmaiden.dx90.vtx
+models/darkerz_mapper/ze_pirates_xmas_stripper/snowmaiden.mdl
+models/darkerz_mapper/ze_pirates_xmas_stripper/snowmaiden.vvd
+models/darkerz_mapper/ze_pirates_xmas_stripper/star.dx90.vtx
+models/darkerz_mapper/ze_pirates_xmas_stripper/star.mdl
+models/darkerz_mapper/ze_pirates_xmas_stripper/star.vvd
+models/darkerz_mapper/ze_pirates_xmas_stripper/tree/xmas_tree1.dx90.vtx
+models/darkerz_mapper/ze_pirates_xmas_stripper/tree/xmas_tree1.mdl
+models/darkerz_mapper/ze_pirates_xmas_stripper/tree/xmas_tree1.vvd
+models/darkerz_mapper/ze_pirates_xmas_stripper/tree/xmas_tree2.dx90.vtx
+models/darkerz_mapper/ze_pirates_xmas_stripper/tree/xmas_tree2.mdl
+models/darkerz_mapper/ze_pirates_xmas_stripper/tree/xmas_tree2.vvd
+
+sound/darkerz_mapper/ze_pirates_xmas_stripper/7th Dimension - Iron Will.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/Aero Chord feat. DDARK - Shootin Stars (NCS release).mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/Gunther ft. The Sunshine Girls - Ding Dong Song.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/Halocene - Carol of the Bells.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/JayKode - Nutcraka.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/Jibbs - Chain Hang Low (Crizzly & AFK Remix).mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/Lindsey Stirling - Carol of the Bells.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/LITTLE BIG - Suck My Dick.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/Ryu feat. Mayumi Morinaga - Din Don Dan.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/Scott D. Davis - The Final Countdown (Piano Tribute to Europe).mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/The Living Tombstone - Carol of the Bells.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/Tristam & Stephen Walking - Jingle Bells.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/Wham - Last Christmas (Paul Gannon Bootleg).mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/extreme/Allexinno & Starchild - Joanna.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/extreme/Caramella Girls - Caramelldansen.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/extreme/Eisbrecher - Sturmfahrt.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/extreme/Geoxor - Nana.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/extreme/Knife Party - Power Glove.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/extreme/Lil Jon feat. Kool-Aid Man - All I Really Want For Christmas.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/extreme/Powerwolf - Demons Are a Girls Best Friend.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/extreme/Razihel & Aero Chord - Titans.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/extreme/Sauniks - Carol of the Bells.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/extreme/V O E - Giants.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/extreme/William N. Lewis - Last Ones Standing (feat. Tamara Bubble & Abrina).mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/sfx/bladeout.wav
+sound/darkerz_mapper/ze_pirates_xmas_stripper/sfx/crystall.mp3
+sound/darkerz_mapper/ze_pirates_xmas_stripper/sfx/dadada.mp3
