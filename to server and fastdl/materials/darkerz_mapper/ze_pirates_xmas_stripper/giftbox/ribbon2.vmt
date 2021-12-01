@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "darkerz_mapper/ze_pirates_xmas_stripper/giftbox/ribbon2"
+ 	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[.25 .25 .25]"
+	"$bumpmap" "darkerz_mapper/ze_pirates_xmas_stripper/giftbox/ribbon2_bump"
+}

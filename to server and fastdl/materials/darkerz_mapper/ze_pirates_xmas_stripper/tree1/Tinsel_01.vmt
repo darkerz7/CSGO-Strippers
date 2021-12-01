@@ -1,0 +1,19 @@
+"vertexlitgeneric"
+{	
+    "$baseTexture"	                "darkerz_mapper/ze_pirates_xmas_stripper/tree1/Tinsel_01"
+	"$bumpmap"                      "darkerz_mapper/ze_pirates_xmas_stripper/tree1/Tinsel_01_N"
+    "$lightwarptexture"             "darkerz_mapper/ze_pirates_xmas_stripper/tree1/lightwarp_hair"
+	
+    "$translucent"              "1"
+	"$ambientocclusion"         "0"
+	"$normalmapalphaenvmapmask" "1"	
+
+	"$phong"               "1"
+	"$phongboost"	       "60"
+	"$phongexponent"       "10"
+	"$phongfresnelranges"  "[1.0 1.0 1.0]"
+    "$nocull"              "0"
+	
+		"$phongtint"                    "{ 255 208 14 }"
+        "$color2"                        "{ 255 208 14 }"
+}

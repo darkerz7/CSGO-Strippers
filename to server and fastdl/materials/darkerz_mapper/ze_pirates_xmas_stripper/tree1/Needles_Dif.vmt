@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" 		"darkerz_mapper/ze_pirates_xmas_stripper/tree1/Needles_Dif"
+	"$bumpmap" 		"darkerz_mapper/ze_pirates_xmas_stripper/tree1/Needles_Dif_n"
+	"$alphatest" 		"1"
+	"$alphatestreference"   "0.3"
+        "$nocull"              "1"
+
+	"$lightwarptexture"	"darkerz_mapper/ze_pirates_xmas_stripper/tree1/lightwarp_soft_white"
+}

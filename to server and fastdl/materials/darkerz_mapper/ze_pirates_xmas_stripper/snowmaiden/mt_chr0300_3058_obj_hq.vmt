@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+{
+	$basetexture "darkerz_mapper/ze_pirates_xmas_stripper/snowmaiden/tx_chr0300_3058_obj_hq"
+	$bumpmap "darkerz_mapper/ze_pirates_xmas_stripper/snowmaiden/normal"
+	"$nocull" "1"
+	"$lightwarptexture" "darkerz_mapper/ze_pirates_xmas_stripper/snowmaiden/clothwarp"
+	"$phong" "1"
+	"$phongboost"	".02"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges"	"[1 .1 .1]"
+	"$PhongExponent" "1.0"
+	"$halflambert" "1"
+
+
+
+}

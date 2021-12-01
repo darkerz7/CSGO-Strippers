@@ -1,0 +1,5 @@
+"unlitgeneric"
+{
+	$model 1 	"$basetexture" "darkerz_mapper/ze_pirates_xmas_stripper/laser/laser"
+	"$surfaceprop" "glass"
+}

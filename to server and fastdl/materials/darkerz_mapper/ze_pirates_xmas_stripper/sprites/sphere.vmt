@@ -1,0 +1,6 @@
+"Sprite"
+{
+	"$spritescale" "0.5"
+	"$spriteorientation" "vp_parallel"
+	"$basetexture" "darkerz_mapper/ze_pirates_xmas_stripper/sprites/sphere"
+}

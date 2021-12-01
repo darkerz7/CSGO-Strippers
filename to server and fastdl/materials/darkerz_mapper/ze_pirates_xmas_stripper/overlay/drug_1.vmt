@@ -1,0 +1,17 @@
+Refract
+{
+	$normalmap darkerz_mapper/ze_pirates_xmas_stripper/overlay/drug_1
+	$refractamount .1
+	"$translucent"	"1"
+	"$forcerefract"	"1"
+	"$bluramount"	"1"
+	Proxies
+	{
+		TextureScroll
+		{
+			texturescrollvar $bumpTransform
+			texturescrollrate 5
+			texturescrollangle 180.00
+		}
+	}
+}

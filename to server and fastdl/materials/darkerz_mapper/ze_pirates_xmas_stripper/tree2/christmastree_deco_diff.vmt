@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+
+	"$basetexture" "darkerz_mapper/ze_pirates_xmas_stripper/tree2/christmastree_deco_diff"
+	"$bumpmap" "darkerz_mapper/ze_pirates_xmas_stripper/tree2/christmastree_deco_norm"
+	"$nocull" "1"
+}

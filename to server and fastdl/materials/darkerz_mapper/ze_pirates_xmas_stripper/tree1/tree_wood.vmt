@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+{	
+        "$baseTexture"	                "darkerz_mapper/ze_pirates_xmas_stripper/tree1/tree_wood"
+	"$bumpmap"                      "darkerz_mapper/ze_pirates_xmas_stripper/tree1/tree_wood_N"
+        "$translucent"                  1
+	"$vertexcolor"			0
+	"$nocull"			1
+
+	"$envmap"                       "env_cubemap"
+	"$normalmapalphaenvmapmask"     1
+	"$envmapcontrast"               1
+	"$envmapsaturation"             .2
+	"$envmaptint"                   "[ 0.05 0.05 0.05 ]"
+}
+
+

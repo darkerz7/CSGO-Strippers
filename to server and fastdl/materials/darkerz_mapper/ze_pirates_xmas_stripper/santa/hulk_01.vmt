@@ -1,0 +1,23 @@
+VertexLitGeneric
+{
+$baseTexture "darkerz_mapper/ze_pirates_xmas_stripper/santa/santa_tank_color"
+$bumpmap "darkerz_mapper/ze_pirates_xmas_stripper/santa/santa_tank_Normal"
+$lightwarptexture "darkerz_mapper/ze_pirates_xmas_stripper/santa/coach_head_wrp"
+$halflambert 0
+$diffuseexp 1
+
+$AlphaTest 1
+$allowalphatocoverage 1
+$alphatestreference .5
+
+$ambientocclusion 1
+$detail "darkerz_mapper/ze_pirates_xmas_stripper/santa/ci_burning"
+$seamless_detail 1
+$seamless_scale ".005"
+$detailscale 4
+$detailblendfactor .001 
+$detailblendmode 2
+
+$bbqamount 1
+
+}

@@ -1,0 +1,19 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "darkerz_mapper/ze_pirates_xmas_stripper/tree1/gold2"
+	$bumpmap "dev/bump_normal"
+	$phongexponenttexture "darkerz_mapper/ze_pirates_xmas_stripper/tree1/green"	
+	
+	$color2 "[0.6 0.0 0.0]"
+	$blendtintbybasealpha "1"
+	
+	$phong 1
+	$phongboost "16"
+	$phongfresnelranges "[0.3 0.75 1.00]"
+	$phongalbedotint "1"
+	
+	"$envmap" "env_cubemap"
+	$normalmapalphaenvmapmask "1"
+	$envmapfresnel "1"
+	$envmaptint "[0.2 0.2 0.2]"
+}
