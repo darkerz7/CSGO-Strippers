@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "skybox/ze_pirates_xmas_stripper/tealspaceFT"
+		$hdrcompressedtexture "skybox/ze_pirates_xmas_stripper/tealspaceFT"
+	$nofog 1
+	$ignorez 1
+}
