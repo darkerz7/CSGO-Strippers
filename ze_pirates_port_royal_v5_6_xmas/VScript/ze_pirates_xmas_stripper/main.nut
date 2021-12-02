@@ -594,7 +594,7 @@ function Level_Relay6()
 function Level_Relay7()
 {
 	//Change Skybox
-	EntFire("Change_Skybox_Texture","AddOutput","skyboxname ze_pirates_xmas_stripper/tealspace",0.0,null);
+	EntFire("Change_Skybox_Texture","AddOutput","skyboxname ze_pirates_xmas_stripper_fix/tealspace",0.0,null);
 	EntFire("Change_Skybox_Texture","Trigger","",0.01,null);
 	EntFire("voda_44_55_2_sky","Toggle","",0.0,null);
 	EntFire("sky_barak","Break","",0.0,null);
@@ -2479,7 +2479,7 @@ function MesToChat(iMC)
 {
 	if(iMC == 0)
 	{
-		ScriptPrintMessageChatAll(" \x0B[\x04Info\x0B]\x01 XMAS Stripper v.1.4 by\x03 DarkerZ[RUS]");
+		ScriptPrintMessageChatAll(" \x0B[\x04Info\x0B]\x01 XMAS Stripper v.1.5 by\x03 DarkerZ[RUS]");
 	}else if(iMC == 1)
 	{
 		ScriptPrintMessageChatAll(" \x0B[\x04Info\x0B]\x01 Map made by\x03 Puklica");
