@@ -2416,15 +2416,22 @@ function ReplaceKnife()
 	{
 		local oldKnife = null;
 		local Equip = Entities.CreateByClassname("game_player_equip");
-			Equip.__KeyValueFromString("weapon_knife_"+sKnifeGroup[RandomInt(0,sKnifeGroup.len() - 1)],"1");
+		Equip.__KeyValueFromString("weapon_knife_"+sKnifeGroup[RandomInt(0,sKnifeGroup.len() - 1)],"1");
 		while((oldKnife = Entities.FindByClassname(oldKnife,"weapon_knife")) != null)
 		{
-			local playeroldKnife=oldKnife.GetOwner();
-			oldKnife.Destroy();
-			EntFireByHandle(Equip,"Use","",0.00,playeroldKnife,playeroldKnife);
+			local kName = oldKnife.GetName();
+			if(kName != "spxZM_broomstick_knife" && kName != "spxZM_incendio_knife" && kName != "spxZM_emendo_knife" &&
+			kName != "spxZM_confundus_knife" && kName != "spxZM_deprimo_knife" && kName != "spxZM_expulso_knife" &&
+			kName != "spxZM_disillu_knife" && kName != "spxZM_conjunct_knife" && kName != "spxZM_deletrius_knife" &&
+			kName != "spxZM_reducio_knife")
+			{
+				local playeroldKnife=oldKnife.GetOwner();
+				oldKnife.Destroy();
+				EntFireByHandle(Equip,"Use","",0.05,playeroldKnife,playeroldKnife);
+			}
 		}
-		EntFireByHandle(self,"RunScriptCode","MoveKnife()",0.03,null,null);
-		EntFireByHandle(Equip,"Kill","",0.10,null,null);
+		EntFireByHandle(self,"RunScriptCode","MoveKnife();",0.1,null,null);
+		EntFireByHandle(Equip,"Kill","",0.15,null,null);
 	}
 }
 
@@ -2433,7 +2440,11 @@ function MoveKnife()
 	local oldKnife = null;
 	while((oldKnife = Entities.FindByClassname(oldKnife,"weapon_knife")) != null)
 	{
-		if(oldKnife.GetOwner() == null)
+		local kName = oldKnife.GetName();
+		if(kName != "spxZM_broomstick_knife" && kName != "spxZM_incendio_knife" && kName != "spxZM_emendo_knife" &&
+			kName != "spxZM_confundus_knife" && kName != "spxZM_deprimo_knife" && kName != "spxZM_expulso_knife" &&
+			kName != "spxZM_disillu_knife" && kName != "spxZM_conjunct_knife" && kName != "spxZM_deletrius_knife" &&
+			kName != "spxZM_reducio_knife" && oldKnife.GetOwner() == null)
 		{
 			oldKnife.__KeyValueFromString("classname","weapon_knifegg");	
 		}
