@@ -8,6 +8,7 @@ BLOCKWANDSHOP <- false;
 CLOSEWANDSHOP <- false;
 AUTOBHOP <- false;
 // SERVERTIME <- Time();
+bKnife<-true;//change standart knife
 
 function MapStart()
 {
@@ -35,13 +36,14 @@ function MapStart()
 		EXTREME = true;
 		EntFire("lightworld", "TurnOff", "", 0.00, null);
 		EntFire("sun", "TurnOff", "", 0.00, null);
-		EntFire("tone", "SetAutoExposureMax", ".65", 0.00, null);
-		EntFire("tone", "SetAutoExposureMin", ".45", 0.00, null);
+		EntFire("tone", "SetAutoExposureMax", ".35", 0.00, null);
+		EntFire("tone", "SetAutoExposureMin", ".10", 0.00, null);
 		EntFire("tone", "SetBloomScale", "2.75", 0.00, null);
 		EntFire("sky_night", "Trigger", "", 0.00, null);
 		EntFire("fog_cont", "SetColor", "111 111 111", 0.00, null);
 		EntFire("fog_cont", "SetColorSecondary", "111 111 111", 0.00, null);
 	}
+	EntFireByHandle(self, "RunScriptCode", "ReplaceKnife();", 2.0, null, null);
 	EntFire("map_stages_case_*", "InValue", "", 1.00, null);
 	EntFire("map_screenoverlay", "SwitchOverlay", "1", 0.85, null);
 	EntFire("item_skin_dum_effect_static", "Start", "", 0.70, null);
@@ -87,7 +89,13 @@ function MapStart()
 	    EntFire("map_fog", "Kill", "", 0, null);
 	    EntFire("stage3_wizard_cd_r*", "CancelPending", "", 0.3, null);
 	    EntFire("map_skybox_template", "AddOutput", "OnEntitySpawned map_skybox_effect:Kill::0.1:-1", 0.5, null);
-	    EntFire("map_hint_case", "AddOutput", "OnCase16 map_hint_msg8B:AddOutput:message Normal mode active:0:1", 0.1, null);
+	    //Normal mode
+		EntFire("fog_cont","SetColor","253 239 208",0.8,null);
+		EntFire("fog_cont","SetColorSecondary","253 239 208",0.8,null);
+		EntFire("fog_cont","SetStartDist","6500",0.8,null);
+		EntFire("fog_cont","SetEndDist","7500",0.8,null);
+		EntFire("fog_cont","SetFarZ","7500",0.8,null);
+		EntFire("map_hint_case", "AddOutput", "OnCase16 map_hint_msg8B:AddOutput:message Normal mode active:0:1", 0.1, null);
 	    EntFire("map_ambient_def1", "AddOutput", "targetname map_sound_switch_nrml1", 0.1, null);
 	    EntFire("map_ambient_def2", "AddOutput", "targetname map_sound_switch_nrml2", 0.1, null);
 	    EntFire("map_skybox_clouds", "AddOutput", "targetname map_skybox_cspawn", 0.5, null);
@@ -101,8 +109,21 @@ function MapStart()
 		EntFire("lightworld", "TurnOff", "", 0.3, null);
 		EntFire("map_skybox_clouds", "AddOutput", "targetname map_skybox_cspawn", 0.5, null);
 		EntFire("map_skybox_template", "AddOutput", "OnEntitySpawned map_skybox_clouds:Color:255 51 51:0:-1", 0.4, null);
-		EntFire("map_skybox_template", "AddOutput", "OnEntitySpawned map_skybox_effect:Stop::0:-1", 0.4, null);
-		EntFire("map_skybox_template", "AddOutput", "OnEntitySpawned map_skybox_effect:Start::0.1:-1", 0.4, null);
+		//Disable rain - more fps
+		//EntFire("map_skybox_template", "AddOutput", "OnEntitySpawned map_skybox_effect:Stop::0:-1", 0.4, null);
+		//EntFire("map_skybox_template", "AddOutput", "OnEntitySpawned map_skybox_effect:Start::0.1:-1", 0.4, null);
+		//EntFire("map_adroom_comp_weather", "SetCompareValue", "1", 9.5, null);
+		//EntFire("map_adroom_comp_weather", "Compare", "", 10.0, null);
+		EntFire("map_skybox_template", "AddOutput", "OnEntitySpawned map_skybox_effect:Kill::0.1:-1", 0.5, null);
+		EntFire("weathersys_trigger_*", "Kill", "", 15.3, null);
+		EntFire("weathersys_timer", "Disable", "", 15.4, null);
+		EntFire("console", "Command", "say [More FPS] Weather and Effects was disabled", 15.50, null);
+		//DarkMode
+		EntFire("fog_cont","SetColor","10 10 10",0.8,null);
+		EntFire("fog_cont","SetColorSecondary","10 10 10",0.8,null);
+		EntFire("fog_cont","SetStartDist","512",0.8,null);
+		EntFire("fog_cont","SetEndDist","1200",0.8,null);
+		EntFire("fog_cont","SetFarZ","5000",0.8,null);
 		EntFire("map_hint_case", "AddOutput", "OnCase16 map_hint_msg8B:AddOutput:message Extreme mode active:0:1", 0.1, null);
 		EntFire("map_ambient_def1", "AddOutput", "targetname map_sound_switch_xtrm1", 0.1, null);
 		EntFire("map_ambient_def2", "AddOutput", "targetname map_sound_switch_xtrm2", 0.1, null);
@@ -328,7 +349,7 @@ function MapStart()
 		EntFire("map_shake", "FireUser3", "", 60.00, null);
 		EntFire("new_check_delay_15", "Kill", "", 79.50, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stg1:Enable::0.60:1", 83.00, null);
-		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING NEXT STAGE <<<:0.50:1", 82.00, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 2 STAGE <<<:0.50:1", 82.00, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:1:0.30:1", 81.00, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stg1:Enable::0.30:1", 80.00, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin -7091 -942 12850", 7.50, null);
@@ -455,7 +476,7 @@ function MapStart()
 		EntFire("map_shake", "FireUser3", "", 60.00, null);
 		EntFire("new_check_delay_15", "Kill", "", 79.50, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stg2:Enable::0.60:1", 83.00, null);
-		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING NEXT STAGE <<<:0.50:1", 82.00, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 3 STAGE <<<:0.50:1", 82.00, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:2:0.30:1", 81.00, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stg2:Enable::0.30:1", 80.00, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin 12896 2835 6121", 7.50, null);
@@ -718,7 +739,7 @@ function MapStart()
 		EntFire("map_hint_zmtemp", "Display", "", 43.00, null);
 		EntFire("new_check_delay_15", "Kill", "", 79.50, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stgZM:Enable::0.60:1", 83.00, null);
-		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING NEXT STAGE <<<:0.50:1", 82.00, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 4 STAGE <<<:0.50:1", 82.00, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:3:0.30:1", 81.00, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stgZM:Enable::0.30:1", 80.00, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin 11789 -3461 -7304", 7.50, null);
@@ -834,7 +855,7 @@ function MapStart()
 		EntFire("map_shake", "FireUser3", "", 60, null);
 		EntFire("new_check_delay_15", "Kill", "", 79.5, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stg3:Enable::0.60:1", 83, null);
-		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING NEXT STAGE <<<:0.50:1", 82, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 5 STAGE <<<:0.50:1", 82, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:4:0.30:1", 81, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stg3:Enable::0.30:1", 80, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin -11885 -5496 1776", 7.5, null);
@@ -990,7 +1011,7 @@ function MapStart()
 		EntFire("map_shake", "FireUser3", "", 60, null);
 		EntFire("new_check_delay_15", "Kill", "", 79.5, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stg4:Enable::0.60:1", 83, null);
-		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING NEXT STAGE <<<:0.50:1", 82, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 6 STAGE <<<:0.50:1", 82, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:5:0.30:1", 81, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stg4:Enable::0.30:1", 80, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin -13604 1671 -10059", 7.5, null);
@@ -1286,7 +1307,7 @@ function MapStart()
 		EntFire("map_shake", "FireUser3", "", 60, null);
 		EntFire("new_check_delay_20", "Kill", "", 79.5, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stg1:Enable::0.60:1", 83, null);
-		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING NEXT STAGE <<<:0.50:1", 82, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 8 STAGE <<<:0.50:1", 82, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:1:0.30:1", 81, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stg1:Enable::0.30:1", 80, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin -7091 -942 12850", 7.5, null);
@@ -1417,7 +1438,7 @@ function MapStart()
 		EntFire("map_shake", "FireUser3", "", 60, null);
 		EntFire("new_check_delay_20", "Kill", "", 79.5, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stg2:Enable::0.60:1", 83, null);
-		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING NEXT STAGE <<<:0.50:1", 82, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 9 STAGE <<<:0.50:1", 82, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:2:0.30:1", 81, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stg2:Enable::0.30:1", 80, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin 12896 2835 6121", 7.5, null);
@@ -1652,7 +1673,7 @@ function MapStart()
 		EntFire("spxZM_effect_wand_*", "Stop", "", 270, null);
 		EntFire("new_check_delay_20", "Kill", "", 79.5, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stgZM:Enable::0.60:1", 83, null);
-		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING NEXT STAGE <<<:0.50:1", 82, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 10 STAGE <<<:0.50:1", 82, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:3:0.30:1", 81, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stgZM:Enable::0.30:1", 80, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin 11789 -3461 -7304", 7.5, null);
@@ -1792,7 +1813,7 @@ function MapStart()
 		EntFire("map_shake", "FireUser3", "", 60, null);
 		EntFire("new_check_delay_20", "Kill", "", 79.5, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stg3:Enable::0.60:1", 83, null);
-		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING NEXT STAGE <<<:0.50:1", 82, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 11 STAGE <<<:0.50:1", 82, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:4:0.30:1", 81, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stg3:Enable::0.30:1", 80, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin -11885 -5496 1776", 7.5, null);
@@ -1923,7 +1944,7 @@ function MapStart()
 		EntFire("map_shake", "FireUser3", "", 60, null);
 		EntFire("new_check_delay_20", "Kill", "", 79.5, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stg4:Enable::0.60:1", 83, null);
-		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING NEXT STAGE <<<:0.50:1", 82, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 12 STAGE <<<:0.50:1", 82, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:5:0.30:1", 81, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stg4:Enable::0.30:1", 80, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin -13604 1671 -10059", 7.5, null);
@@ -2384,6 +2405,38 @@ function CheckLevel()
 		EntFire("console", "Command", "sv_autobunnyhopping 0", 0.00, null);
 		EntFire("console", "Command", "sv_airaccelerate 12", 0.00, null);
 		EntFire("console", "Command", "sv_maxspeed 300", 5.00, null);
+	}
+}
+
+sKnifeGroup <- ["flip","gut","karambit","m9_bayonet","tactical","butterfly","falchion","push","survival_bowie","ursus","gypsy_jackknife","stiletto","widowmaker"];
+
+function ReplaceKnife()
+{
+	if(bKnife==true)
+	{
+		local oldKnife = null;
+		local Equip = Entities.CreateByClassname("game_player_equip");
+			Equip.__KeyValueFromString("weapon_knife_"+sKnifeGroup[RandomInt(0,sKnifeGroup.len() - 1)],"1");
+		while((oldKnife = Entities.FindByClassname(oldKnife,"weapon_knife")) != null)
+		{
+			local playeroldKnife=oldKnife.GetOwner();
+			oldKnife.Destroy();
+			EntFireByHandle(Equip,"Use","",0.00,playeroldKnife,playeroldKnife);
+		}
+		EntFireByHandle(self,"RunScriptCode","MoveKnife()",0.03,null,null);
+		EntFireByHandle(Equip,"Kill","",0.10,null,null);
+	}
+}
+
+function MoveKnife()
+{
+	local oldKnife = null;
+	while((oldKnife = Entities.FindByClassname(oldKnife,"weapon_knife")) != null)
+	{
+		if(oldKnife.GetOwner() == null)
+		{
+			oldKnife.__KeyValueFromString("classname","weapon_knifegg");	
+		}
 	}
 }
 

@@ -7,6 +7,8 @@ PROTEGOCALL <- null;
 PROTEGOONCE <- true;
 PROTEGOLEVEL <- 0;
 ////////////////////////////////
+DELETRIUSENABLEAVADA <- true;
+DELETRIUSENABLEACCIO <- true;
 
 ////////////////////////////////
 ////////////PROTEGO/////////////
@@ -579,6 +581,7 @@ function UseItemAvada()
     if(activator.GetTeam() == 3 && activator == AVADAACT && AVADAUSES <= AVADAMAXUSES && !ITEM_DISABLE)
     { 
         AVADAUSES++;
+		DELETRIUSENABLEAVADA = true;
         EntFire("spx_avada_effect_active*","Start","", 0.00, null);
         EntFire("spx_avada_button","Lock","", 0.00, null);
 		EntFire("spx_effect_wand_avada","Stop","", 0.00, null);
@@ -588,7 +591,8 @@ function UseItemAvada()
         EntFire("spx_avada_zms_light","TurnOff","", 2.00, null);
         EntFire("!activator","RunScriptCode","AvadaUsedText();",4.99,AVADAACT);
         EntFireByHandle(self, "RunScriptCode", "SaveAvadaZmTp();", 9.00, null, null);
-        EntFire("spx_avada_trigger*","Enable","", 10.00, null);
+        //EntFire("spx_avada_trigger*","Enable","", 10.00, null);
+		EntFireByHandle(self, "RunScriptCode", "AvadaStopedDeletrius();", 10.00, null, null);
         EntFire("spx_avada_effect_active*","DestroyImmediately","", 11.00, null);
         EntFire("spx_avada_trigger*","Disable","", 11.00, null);
         if(AVADALEVEL == 0)
@@ -655,6 +659,11 @@ function UseItemAvada()
             EntFire("spx_avada_effect_active*","Kill","", 20.50, null);
         }
     }
+}
+
+function AvadaStopedDeletrius()
+{
+	if(DELETRIUSENABLEAVADA) EntFire("spx_avada_trigger*","Enable","", 0.00, null);
 }
 
 function SaveAvadaZmTp()
@@ -1559,6 +1568,7 @@ function UseItemAccio()
     if(activator.GetTeam() == 3 && activator == ACCIOACT && !ITEM_DISABLE)
     { 
         EntFire("spx_accio_button","Lock","", 0.00, null);
+		DELETRIUSENABLEACCIO = true;
         GiveAmmoAccio();
         EntFire("spx_accio_effect_active*","Start","", 0.00, null);
         EntFire("spx_effect_wand_accio","Stop","", 0.00, null);
@@ -1584,7 +1594,8 @@ function UseItemAccio()
         else if(ACCIOLEVEL == 1)
         {
             EntFire("spx_accio_effect_active*","Stop","", 5.00, null);
-            EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",2.50,null,null);
+            EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",2.00,null,null);
+            EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",3.50,null,null);
             EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",5.00,null,null);
             EntFire("spx_accio_t*","Disable","", 5.00, null);
             EntFire("spx_accio_spwnr_relay","Disable","", 5.00, null);
@@ -1599,7 +1610,8 @@ function UseItemAccio()
         else if(ACCIOLEVEL == 2)
         {
             EntFire("spx_accio_effect_active*","Stop","", 5.00, null);
-            EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",2.50,null,null);
+            EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",2.00,null,null);
+			EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",3.50,null,null);
             EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",5.00,null,null);
             EntFire("spx_accio_t*","Disable","", 5.00, null);
             EntFire("spx_accio_spwnr_relay","Disable","", 5.00, null);
@@ -1614,7 +1626,8 @@ function UseItemAccio()
         else if(ACCIOLEVEL == 3)
         {
             EntFire("spx_accio_effect_active*","Stop","", 6.00, null);
-            EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",3.00,null,null);
+            EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",2.00,null,null);
+            EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",4.00,null,null);
             EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",6.00,null,null);
             EntFire("spx_accio_t*","Disable","", 6.00, null);
             EntFire("spx_accio_spwnr_relay","Disable","", 6.00, null);
@@ -1629,10 +1642,9 @@ function UseItemAccio()
         else if(ACCIOLEVEL == 4)
         {
             EntFire("spx_accio_effect_active*","Stop","", 7.00, null);
-            EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",1.50,null,null);
-            EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",3.00,null,null);
-            EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",4.50,null,null);
-            EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",6.00,null,null);
+            EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",2.00,null,null);
+			EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",4.00,null,null);
+            EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",5.50,null,null);
             EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",7.50,null,null);
             EntFire("spx_accio_t*","Disable","", 7.00, null);
             EntFire("spx_accio_spwnr_relay","Disable","", 7.00, null);
@@ -1649,7 +1661,19 @@ function UseItemAccio()
 
 function GiveAmmoAccio()
 {
-    local ammo = null;
+	//Fixed Ammo bug. Used old method
+	local p = null;
+	if(DELETRIUSENABLEACCIO)
+	{
+		while(null != (p = Entities.FindInSphere(p,ACCIOACT.GetOrigin(),768)))
+		{
+			if(p.GetTeam() == 3 && p.GetHealth() > 0)
+			{
+				EntFire("map_ammo_equip","Use","",0.00,p);
+			}
+		}
+	}
+    /*local ammo = null;
     while(null != (ammo = Entities.FindByClassnameWithin(ammo,"weapon_*",ACCIOACT.GetOrigin(),768)))
     {
         if(ammo.GetOwner() != null &&
@@ -1675,7 +1699,7 @@ function GiveAmmoAccio()
         {
             EntFireByHandle(ammo,"SetAmmoAmount",""+ACCIOAMMO,0.00,null,null);
         }  
-	}
+	}*/
 }
 
 function AccioItemM()
@@ -3302,11 +3326,14 @@ function UseItemDeletrius()
     { 
         local rnd = RandomInt(1,10);
         {
-            if(rnd <= 6)
+            if(rnd <= 7)
             {
+				DELETRIUSENABLEAVADA = false;
+				DELETRIUSENABLEACCIO = false;
                 EntFire("spxZM_deletrius_effect_*", "Stop", "", 1.00, null);
 	            EntFire("spxZM_deletrius_button", "Lock", "", 1.00, null);
 	            EntFire("spx_protego_spwnr_prop*", "Break", "", 0.00, null);
+				EntFire("spx_protego_spwnr_trig*", "Disable", "", 0.00,null);
 	            EntFire("spx_accio_t*", "Disable", "", 0.00, null);
 	            EntFire("spx_aguamenti_triggers*", "Disable", "", 0.00, null);
 	            EntFire("spx_crucio_trigger*", "Disable", "", 0.00, null);
@@ -3466,6 +3493,7 @@ function UseItemReducio()
 		    if(zmsm.GetTeam() == 2 && zmsm.GetHealth() > 0 && zmsm.IsValid())
 		    {
                 zmsm.SetModel("models/player/gozombie_rescale.mdl");
+				EntFire("item_speedmod","ModifySpeed","1.2",0.00,zmsm);
 		    }
 	    }
         EntFire("spxZM_reducio_button","Lock","", 0.00, null);
@@ -3505,6 +3533,7 @@ function ResetModel()
 		if(zmrm.GetTeam() == 2 && zmrm.GetHealth() > 0 && zmrm.IsValid())
 		{
             zmrm.SetModel("models/player/zombie_harry.mdl");
+			EntFire("item_speedmod","ModifySpeed","1.0",0.00,zmrm);
 		}
 	}
 }

@@ -31,3 +31,11 @@ FIX:
 *Bugfix Wheels Wizard Stage 10 - !!!need test
 *ZMs can pick up only 1 BroomStick
 *Fix CSoundEmitterSystemBase GetParametersForSound No such sound Errors
+<update 26 June 2023>
+*Changed phrases at the end of the stage for issuing rewards
+*Removed weather effects for more fps
+*On extreme now darkmode
+*Fixed give ammo
+*Deletrius now stops avada and accio
+*Reducio gived ZM speed
+*Added knife rechanger
