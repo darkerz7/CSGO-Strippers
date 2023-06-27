@@ -1,6 +1,24 @@
 ZMITEMLVLUP <- 0;
 ITEM_DISABLE <- true;
 ZOMBIE_ITEM_DISABLE <- true;
+EntFire("console", "Command","sm_ewlockbutton 8979602 1",0.00,null);
+EntFire("console", "Command","sm_ewlockbutton 8977961 1",0.00,null);
+EntFire("console", "Command","sm_ewlockbutton 8974097 1",0.00,null);
+EntFire("console", "Command","sm_ewlockbutton 8975848 1",0.00,null);
+EntFire("console", "Command","sm_ewlockbutton 8977321 1",0.00,null);
+EntFire("console", "Command","sm_ewlockbutton 8978959 1",0.00,null);
+EntFire("console", "Command","sm_ewlockbutton 17845738 1",0.00,null);
+EntFire("console", "Command","sm_ewlockbutton 17845811 1",0.00,null);
+EntFire("console", "Command","sm_ewlockbutton 17845448 1",0.00,null);
+EntFire("console", "Command","sm_ewlockbutton 9129450 1",0.00,null);
+EntFire("console", "Command","sm_ewlockbutton 9127617 1",0.00,null);
+EntFire("console", "Command","sm_ewlockbutton 17845958 1",0.00,null);
+EntFire("console", "Command","sm_ewlockbutton 9128865 1",0.00,null);
+EntFire("console", "Command","sm_ewlockbutton 17846257 1",0.00,null);
+EntFire("console", "Command","sm_ewlockbutton 17846183 1",0.00,null);
+EntFire("console", "Command","sm_ewlockbutton 9125676 1",0.00,null);
+EntFire("console", "Command","sm_ewlockbutton 20869434 1",0.00,null);
+EntFire("console", "Command","sm_ewlockbutton 9128126 1",0.00,null);
 ////////////////////////////////
 PROTEGOACT <- null;
 PROTEGOCALL <- null;
@@ -41,7 +59,8 @@ function ProtegoReceivedLevel()
         EntFire("spx_effect_upgrade_protego","Kill","",2.00,null);
         EntFire("spx_protego_spwnr_template2","Kill","",2.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(0, 0);",3.00,PROTEGOACT);
-		EntFire("console","Command","sm_setcooldown 8979602 60",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8979602 60",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8979602 Protego|Lv.0|",0.00,null);
     }
     else if(PROTEGOLEVEL == 1)
     {
@@ -52,7 +71,8 @@ function ProtegoReceivedLevel()
         EntFire("spx_effect_upgrade_protego","Kill","",2.00,null);
         EntFire("spx_protego_spwnr_template2","Kill","",2.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(0, 1);",3.00,PROTEGOACT);
-		EntFire("console","Command","sm_setcooldown 8979602 60",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8979602 60",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8979602 Protego|Lv.1|",0.00,null);
     }
     else if(PROTEGOLEVEL == 2)
     {
@@ -64,7 +84,8 @@ function ProtegoReceivedLevel()
         EntFire("spx_effect_upgrade_protego","Kill","",2.00,null);
         EntFire("spx_protego_spwnr_template2","Kill","",2.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(0, 2);",3.00,PROTEGOACT);
-		EntFire("console","Command","sm_setcooldown 8979602 55",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8979602 55",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8979602 Protego|Lv.2|",0.00,null);
     }
     else if(PROTEGOLEVEL == 3)
     {
@@ -76,7 +97,8 @@ function ProtegoReceivedLevel()
         EntFire("spx_effect_upgrade_protego","Kill","",2.00,null);
         EntFire("spx_protego_spwnr_template2","Kill","",2.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(0, 3);",3.00,PROTEGOACT);
-		EntFire("console","Command","sm_setcooldown 8979602 55",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8979602 55",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8979602 Protego|Lv.3|",0.00,null);
     }
     else if(PROTEGOLEVEL == 4)
     {
@@ -88,7 +110,8 @@ function ProtegoReceivedLevel()
         EntFire("spx_effect_upgrade_protego","Kill","",2.00,null);
         EntFire("spx_protego_spwnr_template","Kill","",2.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(0, 4);",3.00,PROTEGOACT);
-		EntFire("console","Command","sm_setcooldown 8979602 50",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8979602 50",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8979602 Protego|Lv.4|",0.00,null);
     }
 }
 
@@ -98,13 +121,13 @@ function UseItemProtego()
     { 
         EntFire("spx_protego_button","Lock","", 0.00, null);
         EntFire("spx_protego_spwnr_temp*","ForceSpawn","", 0.00, null);
-		EntFire("spx_effect_wand_protego","Stop","", 0.00, null);
+        EntFire("spx_effect_wand_protego","Stop","", 0.00, null);
         EntFire("map_sound_wands","PlaySound","", 0.00, null);
         EntFire("spx_protego_spwnr_d*","ClearParent","", 1.00, null);
-		EntFire("spx_protego_spwnr_p*","ClearParent","", 1.00, null);
-		EntFire("spx_protego_spwnr_tr*","ClearParent","", 1.00, null);
+        EntFire("spx_protego_spwnr_p*","ClearParent","", 1.00, null);
+        EntFire("spx_protego_spwnr_tr*","ClearParent","", 1.00, null);
         EntFire("spx_protego_spwnr_d*","Kill","", 2.00, null);
-		EntFire("spx_protego_spwnr_tr*","Kill","", 8.00, null);
+        EntFire("spx_protego_spwnr_tr*","Kill","", 8.00, null);
         EntFire("spx_protego_wandprop","Color","255 28 28", 0.00, null);
         if(PROTEGOLEVEL == 0)
         {
@@ -242,7 +265,8 @@ function RepairoReceivedLevel()
         EntFire("spx_repairo_effect_active2","Kill","",3.00,null);
         EntFire("spx_repairo_effect_active3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(1, 0);",3.00,REPAIROACT);
-		EntFire("console","Command","sm_setcooldown 8978959 50",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8978959 50",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8978959 Reparo|Lv.0|",0.00,null);
     }
     else if(REPAIROLEVEL == 1)
     {
@@ -265,7 +289,8 @@ function RepairoReceivedLevel()
         EntFire("spx_repairo_effect_active2","Kill","",3.00,null);
         EntFire("spx_repairo_effect_active3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(1, 1);",3.00,REPAIROACT);
-        EntFire("console","Command","sm_setcooldown 8978959 50",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8978959 50",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8978959 Reparo|Lv.1|",0.00,null);
     }
     else if(REPAIROLEVEL == 2)
     {
@@ -289,7 +314,8 @@ function RepairoReceivedLevel()
         EntFire("spx_repairo_effect_active1","Kill","",3.00,null);
         EntFire("spx_repairo_effect_active3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(1, 2);",3.00,REPAIROACT);
-        EntFire("console","Command","sm_setcooldown 8978959 45",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8978959 45",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8978959 Reparo|Lv.2|",0.00,null);
     }
     else if(REPAIROLEVEL == 3)
     {
@@ -314,7 +340,8 @@ function RepairoReceivedLevel()
         EntFire("spx_repairo_effect_active1","Kill","",3.00,null);
         EntFire("spx_repairo_effect_active2","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(1, 3);",3.00,REPAIROACT);
-       EntFire("console","Command","sm_setcooldown 8978959 45",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8978959 45",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8978959 Reparo|Lv.3|",0.00,null);
     }
     else if(REPAIROLEVEL == 4)
     {
@@ -339,7 +366,8 @@ function RepairoReceivedLevel()
         EntFire("spx_repairo_effect_active1","Kill","",3.00,null);
         EntFire("spx_repairo_effect_active2","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(1, 4);",3.00,REPAIROACT);
-		EntFire("console","Command","sm_setcooldown 8978959 40",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8978959 40",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8978959 Reparo|Lv.4|",0.00,null);
     }
 }
 
@@ -349,10 +377,10 @@ function UseItemRepairo()
     { 
         EntFire("spx_repairo_button","Lock","", 0.00, null);
         EntFire("spx_repairo_trigger*","Enable","", 0.00, null);
-		EntFire("spx_effect_wand_repairo","Stop","", 0.00, null);
+        EntFire("spx_effect_wand_repairo","Stop","", 0.00, null);
         EntFire("map_sound_wands","PlaySound","", 0.00, null);
         EntFire("spx_repairo_effect_active*","Start","", 0.00, null);
-		EntFire("stage5_boss_h_healer","Enable","", 0.00, null);
+        EntFire("stage5_boss_h_healer","Enable","", 0.00, null);
         EntFire("spx_repairo_wandprop","Color","255 28 28", 0.00, null);
         if(REPAIROLEVEL == 0)
         {
@@ -492,7 +520,8 @@ function AvadaReceivedLevel()
         EntFire("spx_avada_effect_active2","Kill","",3.00,null);
         EntFire("spx_avada_effect_active3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(2, 0);",3.00,AVADAACT);
-		EntFire("console","Command","sm_setcooldown 8977961 140",3.00,null);
+        EntFire("console","Command","sm_ewsetmode 8977961 4 140 2 1",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8977961 Avada|Lv.0|",0.00,null);
     }
     else if(AVADALEVEL == 1)
     {
@@ -511,7 +540,8 @@ function AvadaReceivedLevel()
         EntFire("spx_avada_effect_active2","Kill","",3.00,null);
         EntFire("spx_avada_effect_active3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(2, 1);",3.00,AVADAACT);
-		EntFire("console","Command","sm_setcooldown 8977961 135",3.00,null);
+        EntFire("console","Command","sm_ewsetmode 8977961 4 135 3 1",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8977961 Avada|Lv.1|",0.00,null);
         
     }
     else if(AVADALEVEL == 2)
@@ -532,7 +562,8 @@ function AvadaReceivedLevel()
         EntFire("spx_avada_effect_active","Kill","",3.00,null);
         EntFire("spx_avada_effect_active3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(2, 2);",3.00,AVADAACT);
-        EntFire("console","Command","sm_setcooldown 8977961 130",3.00,null);
+        EntFire("console","Command","sm_ewsetmode 8977961 4 130 3 1",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8977961 Avada|Lv.2|",0.00,null);
     }
     else if(AVADALEVEL == 3)
     {
@@ -552,7 +583,8 @@ function AvadaReceivedLevel()
         EntFire("spx_avada_effect_active","Kill","",3.00,null);
         EntFire("spx_avada_effect_active2","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(2, 3);",3.00,AVADAACT);
-		EntFire("console","Command","sm_setcooldown 8977961 125",3.00,null);
+        EntFire("console","Command","sm_ewsetmode 8977961 4 125 3 1",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8977961 Avada|Lv.3|",0.00,null);
     }
     else if(AVADALEVEL == 4)
     {
@@ -572,7 +604,8 @@ function AvadaReceivedLevel()
         EntFire("spx_avada_effect_active","Kill","",3.00,null);
         EntFire("spx_avada_effect_active2","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(2, 4);",3.00,AVADAACT);
-		EntFire("console","Command","sm_setcooldown 8977961 120",3.00,null);
+        EntFire("console","Command","sm_ewsetmode 8977961 4 120 3 1",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8977961 Avada|Lv.4|",0.00,null);
     }
 }
 
@@ -581,10 +614,10 @@ function UseItemAvada()
     if(activator.GetTeam() == 3 && activator == AVADAACT && AVADAUSES <= AVADAMAXUSES && !ITEM_DISABLE)
     { 
         AVADAUSES++;
-		DELETRIUSENABLEAVADA = true;
+        DELETRIUSENABLEAVADA = true;
         EntFire("spx_avada_effect_active*","Start","", 0.00, null);
         EntFire("spx_avada_button","Lock","", 0.00, null);
-		EntFire("spx_effect_wand_avada","Stop","", 0.00, null);
+        EntFire("spx_effect_wand_avada","Stop","", 0.00, null);
         EntFire("map_sound_wands","PlaySound","", 0.00, null);
         EntFire("spx_avada_wandprop","Color","255 28 28", 0.00, null);
         EntFire("spx_avada_zms_exit","Kill","", 1.00, null);
@@ -592,7 +625,7 @@ function UseItemAvada()
         EntFire("!activator","RunScriptCode","AvadaUsedText();",4.99,AVADAACT);
         EntFireByHandle(self, "RunScriptCode", "SaveAvadaZmTp();", 9.00, null, null);
         //EntFire("spx_avada_trigger*","Enable","", 10.00, null);
-		EntFireByHandle(self, "RunScriptCode", "AvadaStopedDeletrius();", 10.00, null, null);
+        EntFireByHandle(self, "RunScriptCode", "AvadaStopedDeletrius();", 10.00, null, null);
         EntFire("spx_avada_effect_active*","DestroyImmediately","", 11.00, null);
         EntFire("spx_avada_trigger*","Disable","", 11.00, null);
         if(AVADALEVEL == 0)
@@ -663,16 +696,16 @@ function UseItemAvada()
 
 function AvadaStopedDeletrius()
 {
-	if(DELETRIUSENABLEAVADA) EntFire("spx_avada_trigger*","Enable","", 0.00, null);
+    if(DELETRIUSENABLEAVADA) EntFire("spx_avada_trigger*","Enable","", 0.00, null);
 }
 
 function SaveAvadaZmTp()
 {
     local h = null;
-	while(null != (h = Entities.FindInSphere(h,AVADAACT.GetOrigin(),1000)))
-	{
-		if(h.GetTeam() == 2 && h.GetHealth() > 0 && h.IsValid())
-		{
+    while(null != (h = Entities.FindInSphere(h,AVADAACT.GetOrigin(),1000)))
+    {
+        if(h.GetTeam() == 2 && h.GetHealth() > 0 && h.IsValid())
+        {
             EntFireByHandle(h,"addoutput","origin -256 1888 -1936",0.00,null,null);
             EntFire("item_speedmod","ModifySpeed","0",0.00,h);
             EntFire("spx_avada_zms_light","TurnOn","",0.00,null);
@@ -680,9 +713,9 @@ function SaveAvadaZmTp()
             EntFire("spx_avada_telefix","ForceSpawn","",4.00,null);
             EntFire("spx_avada_zms_exit","Kill","",6.00,null);
             EntFire("spx_avada_zms_light","TurnOff","",7.00,null);
-			return;
-		}
-	}
+            return;
+        }
+    }
 }
 
 function AvadaItemM()
@@ -762,7 +795,8 @@ function FlipendoReceivedLevel()
         EntFire("spx_flipendo_effect_active3","Kill","",3.00,null);
         EntFire("spx_flipendo_effect_active4","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(3, 0);",3.00,FLIPENDOACT);
-		EntFire("console","Command","sm_setcooldown 8977321 60",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8977321 60",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8977321 Flipendo|Lv.0|",0.00,null);
     }
     else if(FLIPENDOLEVEL == 1)
     {
@@ -784,7 +818,8 @@ function FlipendoReceivedLevel()
         EntFire("spx_flipendo_effect_active3","Kill","",3.00,null);
         EntFire("spx_flipendo_effect_active4","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(3, 1);",3.00,FLIPENDOACT);
-		EntFire("console","Command","sm_setcooldown 8977321 55",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8977321 55",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8977321 Flipendo|Lv.1|",0.00,null);
     }
     else if(FLIPENDOLEVEL == 2)
     {
@@ -807,7 +842,8 @@ function FlipendoReceivedLevel()
         EntFire("spx_flipendo_effect_active3","Kill","",3.00,null);
         EntFire("spx_flipendo_effect_active4","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(3, 2);",3.00,FLIPENDOACT);
-		EntFire("console","Command","sm_setcooldown 8977321 55",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8977321 55",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8977321 Flipendo|Lv.2|",0.00,null);
     }
     else if(FLIPENDOLEVEL == 3)
     {
@@ -830,7 +866,8 @@ function FlipendoReceivedLevel()
         EntFire("spx_flipendo_effect_active2","Kill","",3.00,null);
         EntFire("spx_flipendo_effect_active4","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(3, 3);",3.00,FLIPENDOACT);
-		EntFire("console","Command","sm_setcooldown 8977321 50",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8977321 50",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8977321 Flipendo|Lv.3|",0.00,null);
     }
     else if(FLIPENDOLEVEL == 4)
     {
@@ -853,7 +890,8 @@ function FlipendoReceivedLevel()
         EntFire("spx_flipendo_effect_active2","Kill","",3.00,null);
         EntFire("spx_flipendo_effect_active3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(3, 4);",3.00,FLIPENDOACT);
-		EntFire("console","Command","sm_setcooldown 8977321 45",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8977321 45",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8977321 Flipendo|Lv.4|",0.00,null);
     }
 }
 
@@ -1001,7 +1039,8 @@ function ImpedimentaReceivedLevel()
         EntFire("spx_impedimenta_effect_active3","Kill","",3.00,null);
         EntFire("spx_impedimenta_effect_active4","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(4, 0);",3.00,IMPEDIMENTAACT);
-		EntFire("console","Command","sm_setcooldown 8975848 70",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8975848 70",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8975848 Impedimenta|Lv.0|",0.00,null);
     }
     else if(IMPEDIMENTALEVEL == 1)
     {
@@ -1024,7 +1063,8 @@ function ImpedimentaReceivedLevel()
         EntFire("spx_impedimenta_effect_active3","Kill","",3.00,null);
         EntFire("spx_impedimenta_effect_active4","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(4, 1);",3.00,IMPEDIMENTAACT);
-		EntFire("console","Command","sm_setcooldown 8975848 65",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8975848 65",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8975848 Impedimenta|Lv.1|",0.00,null);
     }
     else if(IMPEDIMENTALEVEL == 2)
     {
@@ -1048,7 +1088,8 @@ function ImpedimentaReceivedLevel()
         EntFire("spx_impedimenta_effect_active2","Kill","",3.00,null);
         EntFire("spx_impedimenta_effect_active4","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(4, 2);",3.00,IMPEDIMENTAACT);
-		EntFire("console","Command","sm_setcooldown 8975848 60",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8975848 60",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8975848 Impedimenta|Lv.2|",0.00,null);
     }
     else if(IMPEDIMENTALEVEL == 3)
     {
@@ -1072,7 +1113,8 @@ function ImpedimentaReceivedLevel()
         EntFire("spx_impedimenta_effect_active2","Kill","",3.00,null);
         EntFire("spx_impedimenta_effect_active3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(4, 3);",3.00,IMPEDIMENTAACT);
-		EntFire("console","Command","sm_setcooldown 8975848 55",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8975848 55",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8975848 Impedimenta|Lv.3|",0.00,null);
     }
     else if(IMPEDIMENTALEVEL == 4)
     {
@@ -1096,7 +1138,8 @@ function ImpedimentaReceivedLevel()
         EntFire("spx_impedimenta_effect_active2","Kill","",3.00,null);
         EntFire("spx_impedimenta_effect_active3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(4, 4);",3.00,IMPEDIMENTAACT);
-		EntFire("console","Command","sm_setcooldown 8975848 50",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8975848 50",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8975848 Impedimenta|Lv.4|",0.00,null);
     }
 }
 
@@ -1247,7 +1290,8 @@ function IncendioReceivedLevel()
         EntFire("spx_incendio_effect_active2","Kill","",3.00,null);
         EntFire("spx_incendio_effect_active3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(5, 0);",3.00,INCENDIOACT);
-		EntFire("console","Command","sm_setcooldown 8974097 55",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8974097 55",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8974097 Incendio|Lv.0|",0.00,null);
     }
     else if(INCENDIOLEVEL == 1)
     {
@@ -1270,7 +1314,8 @@ function IncendioReceivedLevel()
         EntFire("spx_incendio_effect_active2","Kill","",3.00,null);
         EntFire("spx_incendio_effect_active3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(5, 1);",3.00,INCENDIOACT);
-		EntFire("console","Command","sm_setcooldown 8974097 50",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8974097 50",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8974097 Incendio|Lv.1|",0.00,null);
     }
     else if(INCENDIOLEVEL == 2)
     {
@@ -1294,7 +1339,8 @@ function IncendioReceivedLevel()
         EntFire("spx_incendio_effect_active1","Kill","",3.00,null);
         EntFire("spx_incendio_effect_active3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(5, 2);",3.00,INCENDIOACT);
-		EntFire("console","Command","sm_setcooldown 8974097 50",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8974097 50",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8974097 Incendio|Lv.2|",0.00,null);
     }
     else if(INCENDIOLEVEL == 3)
     {
@@ -1318,7 +1364,8 @@ function IncendioReceivedLevel()
         EntFire("spx_incendio_effect_active1","Kill","",3.00,null);
         EntFire("spx_incendio_effect_active2","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(5, 3);",3.00,INCENDIOACT);
-		EntFire("console","Command","sm_setcooldown 8974097 50",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8974097 50",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8974097 Incendio|Lv.3|",0.00,null);
     }
     else if(INCENDIOLEVEL == 4)
     {
@@ -1342,7 +1389,8 @@ function IncendioReceivedLevel()
         EntFire("spx_incendio_effect_active1","Kill","",3.00,null);
         EntFire("spx_incendio_effect_active2","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(5, 4);",3.00,INCENDIOACT);
-		EntFire("console","Command","sm_setcooldown 8974097 45",3.00,null);
+        EntFire("console","Command","sm_setcooldown 8974097 45",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 8974097 Incendio|Lv.4|",0.00,null);
     }
 }
 
@@ -1488,7 +1536,8 @@ function AccioReceivedLevel()
         EntFire("spx_accio_trigger3","Kill","",3.00,null);
         EntFire("spx_accio_effect_active3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(6, 0);",3.00,ACCIOACT);
-		EntFire("console","Command","sm_setcooldown 17845448 50",3.00,null);
+        EntFire("console","Command","sm_setcooldown 17845448 50",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 17845448 Accio|Lv.0|",0.00,null);
     }
     else if(ACCIOLEVEL == 1)
     {
@@ -1505,7 +1554,8 @@ function AccioReceivedLevel()
         EntFire("spx_accio_trigger3","Kill","",3.00,null);
         EntFire("spx_accio_effect_active3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(6, 1);",3.00,ACCIOACT);
-		EntFire("console","Command","sm_setcooldown 17845448 50",3.00,null);
+        EntFire("console","Command","sm_setcooldown 17845448 50",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 17845448 Accio|Lv.1|",0.00,null);
     }
     else if(ACCIOLEVEL == 2)
     {
@@ -1523,7 +1573,8 @@ function AccioReceivedLevel()
         EntFire("spx_accio_trigger3","Kill","",3.00,null);
         EntFire("spx_accio_effect_active3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(6, 2);",3.00,ACCIOACT);
-		EntFire("console","Command","sm_setcooldown 17845448 45",3.00,null);
+        EntFire("console","Command","sm_setcooldown 17845448 45",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 17845448 Accio|Lv.2|",0.00,null);
     }
     else if(ACCIOLEVEL == 3)
     {
@@ -1541,7 +1592,8 @@ function AccioReceivedLevel()
         EntFire("spx_accio_trigger","Kill","",3.00,null);
         EntFire("spx_accio_effect_active","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(6, 3);",3.00,ACCIOACT);
-		EntFire("console","Command","sm_setcooldown 17845448 40",3.00,null);
+        EntFire("console","Command","sm_setcooldown 17845448 40",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 17845448 Accio|Lv.3|",0.00,null);
     }
     else if(ACCIOLEVEL == 4)
     {
@@ -1559,7 +1611,8 @@ function AccioReceivedLevel()
         EntFire("spx_accio_trigger","Kill","",3.00,null);
         EntFire("spx_accio_effect_active","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(6, 4);",3.00,ACCIOACT);
-		EntFire("console","Command","sm_setcooldown 17845448 40",3.00,null);
+        EntFire("console","Command","sm_setcooldown 17845448 40",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 17845448 Accio|Lv.4|",0.00,null);
     }
 }
 
@@ -1568,7 +1621,7 @@ function UseItemAccio()
     if(activator.GetTeam() == 3 && activator == ACCIOACT && !ITEM_DISABLE)
     { 
         EntFire("spx_accio_button","Lock","", 0.00, null);
-		DELETRIUSENABLEACCIO = true;
+        DELETRIUSENABLEACCIO = true;
         GiveAmmoAccio();
         EntFire("spx_accio_effect_active*","Start","", 0.00, null);
         EntFire("spx_effect_wand_accio","Stop","", 0.00, null);
@@ -1611,7 +1664,7 @@ function UseItemAccio()
         {
             EntFire("spx_accio_effect_active*","Stop","", 5.00, null);
             EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",2.00,null,null);
-			EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",3.50,null,null);
+            EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",3.50,null,null);
             EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",5.00,null,null);
             EntFire("spx_accio_t*","Disable","", 5.00, null);
             EntFire("spx_accio_spwnr_relay","Disable","", 5.00, null);
@@ -1643,7 +1696,7 @@ function UseItemAccio()
         {
             EntFire("spx_accio_effect_active*","Stop","", 7.00, null);
             EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",2.00,null,null);
-			EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",4.00,null,null);
+            EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",4.00,null,null);
             EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",5.50,null,null);
             EntFireByHandle(self,"RunScriptCode","GiveAmmoAccio();",7.50,null,null);
             EntFire("spx_accio_t*","Disable","", 7.00, null);
@@ -1661,18 +1714,18 @@ function UseItemAccio()
 
 function GiveAmmoAccio()
 {
-	//Fixed Ammo bug. Used old method
-	local p = null;
-	if(DELETRIUSENABLEACCIO)
-	{
-		while(null != (p = Entities.FindInSphere(p,ACCIOACT.GetOrigin(),768)))
-		{
-			if(p.GetTeam() == 3 && p.GetHealth() > 0)
-			{
-				EntFire("map_ammo_equip","Use","",0.00,p);
-			}
-		}
-	}
+    //Fixed Ammo bug. Used old method
+    local p = null;
+    if(DELETRIUSENABLEACCIO)
+    {
+        while(null != (p = Entities.FindInSphere(p,ACCIOACT.GetOrigin(),768)))
+        {
+            if(p.GetTeam() == 3 && p.GetHealth() > 0)
+            {
+                EntFire("map_ammo_equip","Use","",0.00,p);
+            }
+        }
+    }
     /*local ammo = null;
     while(null != (ammo = Entities.FindByClassnameWithin(ammo,"weapon_*",ACCIOACT.GetOrigin(),768)))
     {
@@ -1699,7 +1752,7 @@ function GiveAmmoAccio()
         {
             EntFireByHandle(ammo,"SetAmmoAmount",""+ACCIOAMMO,0.00,null,null);
         }  
-	}*/
+    }*/
 }
 
 function AccioItemM()
@@ -1783,7 +1836,8 @@ function CrucioReceivedLevel()
         EntFire("spx_crucio_spwnr_template3","Kill","",3.00,null);
         EntFire("spx_crucio_spwnr_template4","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(7, 0);",3.00,CRUCIOACT);
-		EntFire("console","Command","sm_setcooldown 17845738 60",3.00,null);
+        EntFire("console","Command","sm_setcooldown 17845738 60",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 17845738 Crucio|Lv.0|",0.00,null);
     }
     else if(CRUCIOLEVEL == 1)
     {
@@ -1809,7 +1863,8 @@ function CrucioReceivedLevel()
         EntFire("spx_crucio_spwnr_template3","Kill","",3.00,null);
         EntFire("spx_crucio_spwnr_template4","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(7, 1);",3.00,CRUCIOACT);
-		EntFire("console","Command","sm_setcooldown 17845738 55",3.00,null);
+        EntFire("console","Command","sm_setcooldown 17845738 55",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 17845738 Crucio|Lv.1|",0.00,null);
     }
     else if(CRUCIOLEVEL == 2)
     {
@@ -1836,7 +1891,8 @@ function CrucioReceivedLevel()
         EntFire("spx_crucio_spwnr_template2","Kill","",3.00,null);
         EntFire("spx_crucio_spwnr_template4","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(7, 2);",3.00,CRUCIOACT);
-		EntFire("console","Command","sm_setcooldown 17845738 50",3.00,null);
+        EntFire("console","Command","sm_setcooldown 17845738 50",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 17845738 Crucio|Lv.2|",0.00,null);
     }
     else if(CRUCIOLEVEL == 3)
     {
@@ -1863,7 +1919,8 @@ function CrucioReceivedLevel()
         EntFire("spx_crucio_spwnr_template2","Kill","",3.00,null);
         EntFire("spx_crucio_spwnr_template3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(7, 3);",3.00,CRUCIOACT);
-		EntFire("console","Command","sm_setcooldown 17845738 50",3.00,null);
+        EntFire("console","Command","sm_setcooldown 17845738 50",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 17845738 Crucio|Lv.3|",0.00,null);
     }
     else if(CRUCIOLEVEL == 4)
     {
@@ -1891,7 +1948,8 @@ function CrucioReceivedLevel()
         EntFire("spx_crucio_spwnr_template2","Kill","",3.00,null);
         EntFire("spx_crucio_spwnr_template3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(7, 4);",3.00,CRUCIOACT);
-		EntFire("console","Command","sm_setcooldown 17845738 45",3.00,null);
+        EntFire("console","Command","sm_setcooldown 17845738 45",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 17845738 Crucio|Lv.4|",0.00,null);
     }
 }
 
@@ -2037,7 +2095,8 @@ function AguamentiReceivedLevel()
         EntFire("spx_aguamenti_effect_active2","Kill","",3.00,null);
         EntFire("spx_aguamenti_effect_active3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(8, 0);",3.00,AGUAMENTIACT);
-		EntFire("console","Command","sm_setcooldown 17845811 60",3.00,null);
+        EntFire("console","Command","sm_setcooldown 17845811 60",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 17845811 Augamenti|Lv.0|",0.00,null);
     }
     else if(AGUAMENTILEVEL == 1)
     {
@@ -2056,7 +2115,8 @@ function AguamentiReceivedLevel()
         EntFire("spx_aguamenti_effect_active2","Kill","",3.00,null);
         EntFire("spx_aguamenti_effect_active3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(8, 1);",3.00,AGUAMENTIACT);
-		EntFire("console","Command","sm_setcooldown 17845811 55",3.00,null);
+        EntFire("console","Command","sm_setcooldown 17845811 55",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 17845811 Augamenti|Lv.1|",0.00,null);
     }
     else if(AGUAMENTILEVEL == 2)
     {
@@ -2075,7 +2135,8 @@ function AguamentiReceivedLevel()
         EntFire("spx_aguamenti_effect_active","Kill","",3.00,null);
         EntFire("spx_aguamenti_effect_active3","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(8, 2);",3.00,AGUAMENTIACT);
-		EntFire("console","Command","sm_setcooldown 17845811 55",3.00,null);
+        EntFire("console","Command","sm_setcooldown 17845811 55",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 17845811 Augamenti|Lv.2|",0.00,null);
     }
     else if(AGUAMENTILEVEL == 3)
     {
@@ -2094,7 +2155,8 @@ function AguamentiReceivedLevel()
         EntFire("spx_aguamenti_effect_active","Kill","",3.00,null);
         EntFire("spx_aguamenti_effect_active2","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(8, 3);",3.00,AGUAMENTIACT);
-		EntFire("console","Command","sm_setcooldown 17845811 50",3.00,null);
+        EntFire("console","Command","sm_setcooldown 17845811 50",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 17845811 Augamenti|Lv.3|",0.00,null);
     }
     else if(AGUAMENTILEVEL == 4)
     {
@@ -2114,7 +2176,8 @@ function AguamentiReceivedLevel()
         EntFire("spx_aguamenti_effect_active","Kill","",3.00,null);
         EntFire("spx_aguamenti_effect_active2","Kill","",3.00,null);
         EntFire("!activator","RunScriptCode","PersonalItemText(8, 4);",3.00,AGUAMENTIACT);
-		EntFire("console","Command","sm_setcooldown 17845811 50",3.00,null);
+        EntFire("console","Command","sm_setcooldown 17845811 50",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 17845811 Augamenti|Lv.4|",0.00,null);
     }
 }
 
@@ -2249,7 +2312,7 @@ function PickUpBroomStick()
     activator != REDUCIOACT)
     {
         EntFire("item_stripper","StripWeaponsAndSuit","",0.00,activator);
-		EntFireByHandle(caller, "FireUser4", "", 0.01, null, null);
+        EntFireByHandle(caller, "FireUser4", "", 0.01, null, null);
     }
 }
 
@@ -2260,8 +2323,50 @@ function PrintArr()
 
 function ToggleItemUse()
 {
-    if(!ITEM_DISABLE){ITEM_DISABLE = true;}
-    if(ITEM_DISABLE){ITEM_DISABLE = false;}
+    if(!ITEM_DISABLE)
+    {
+        ITEM_DISABLE = true;
+        EntFire("console", "Command","sm_ewlockbutton 8979602 1",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 8977961 1",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 8974097 1",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 8975848 1",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 8977321 1",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 8978959 1",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 17845738 1",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 17845811 1",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 17845448 1",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 9129450 1",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 9127617 1",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 17845958 1",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 9128865 1",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 17846257 1",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 17846183 1",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 9125676 1",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 20869434 1",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 9128126 1",0.00,null);
+    }
+    if(ITEM_DISABLE)
+    {
+        ITEM_DISABLE = false;
+        EntFire("console", "Command","sm_ewlockbutton 8979602 0",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 8977961 0",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 8974097 0",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 8975848 0",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 8977321 0",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 8978959 0",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 17845738 0",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 17845811 0",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 17845448 0",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 9129450 0",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 9127617 0",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 17845958 0",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 9128865 0",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 17846257 0",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 17846183 0",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 9125676 0",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 20869434 0",0.00,null);
+        EntFire("console", "Command","sm_ewlockbutton 9128126 0",0.00,null);
+    }
 }
 
 function StopWandWorks()
@@ -2277,16 +2382,43 @@ function StopWandWorks()
     EntFire("spxZM_incendio_trigger", "Disable", "", 0.00, null);
     EntFire("spxZM_conjunct_effect_active", "Stop", "", 0.00, null);
     EntFire("spxZM_conjunct_trigger", "Disable", "", 0.00, null);
+    EntFire("console", "Command","sm_ewlockbutton 9129450 1",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 9127617 1",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 17845958 1",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 9128865 1",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 17846257 1",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 17846183 1",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 9125676 1",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 20869434 1",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 9128126 1",0.00,null);
 }
 
 function StartWandWorks()
 {
     ZOMBIE_ITEM_DISABLE = true;
+    EntFire("console", "Command","sm_ewlockbutton 9129450 0",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 9127617 0",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 17845958 0",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 9128865 0",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 17846257 0",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 17846183 0",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 9125676 0",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 20869434 0",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 9128126 0",0.00,null);
 }
 
 function EnableZombieWands()
 {
     ZOMBIE_ITEM_DISABLE=true;
+    EntFire("console", "Command","sm_ewlockbutton 9129450 0",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 9127617 0",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 17845958 0",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 9128865 0",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 17846257 0",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 17846183 0",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 9125676 0",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 20869434 0",0.00,null);
+    EntFire("console", "Command","sm_ewlockbutton 9128126 0",0.00,null);
 }
 
 ////////////////////////////////
@@ -2331,46 +2463,46 @@ function CheckOwnerExpulso()
 {
     if(TickCheckExpulso)
     {
-		try
-		{
-			if(EXPULSOCALL.GetMoveParent() != EXPULSOACT)
-			{
-				TickCheckExpulso = false;
-				EXPULSOACT = null;
-				EXPULSOONCE = true;
-				EntFire("spxZM_expulso_trigger", "Disable", "", 0.00, null);
-				EntFire("spxZM_effect_static_expulso", "Stop", "", 0.10, null);
-				EntFire("spxZM_effect_wand_expulso", "Stop", "", 0.10, null);
-				EntFire("spxZM_expulso_e*", "Stop", "", 0.10, null);
-				EntFire("spxZM_effect_wand_expulso", "Kill", "", 0.20, null);
-				EntFire("spxZM_expulso_button", "Kill", "", 0.20, null);
-				EntFire("spxZM_expulso_e*", "Kill", "", 0.20, null);
-				EntFire("spxZM_expulso_knife", "Kill", "", 0.20, null);
-				EntFire("spxZM_expulso_trigger", "Kill", "", 0.20, null);
-				EntFire("spxZM_expulso_wandprop", "Kill", "", 0.20, null);
-				EntFire("itemZM_expulso_entree", "Kill", "", 0.30, null);
-				EntFire("spxZM_effect_static_expulso", "Kill", "", 0.30, null);
-				if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_expulso_template", "ForceSpawn", "", 80.40, null);}
-			}
-		} catch(exception)
-		{
-			TickCheckExpulso = false;
-			EXPULSOACT = null;
-			EXPULSOONCE = true;
-			EntFire("spxZM_expulso_trigger", "Disable", "", 0.00, null);
-			EntFire("spxZM_effect_static_expulso", "Stop", "", 0.10, null);
-			EntFire("spxZM_effect_wand_expulso", "Stop", "", 0.10, null);
-			EntFire("spxZM_expulso_e*", "Stop", "", 0.10, null);
-			EntFire("spxZM_effect_wand_expulso", "Kill", "", 0.20, null);
-			EntFire("spxZM_expulso_button", "Kill", "", 0.20, null);
-			EntFire("spxZM_expulso_e*", "Kill", "", 0.20, null);
-			EntFire("spxZM_expulso_knife", "Kill", "", 0.20, null);
-			EntFire("spxZM_expulso_trigger", "Kill", "", 0.20, null);
-			EntFire("spxZM_expulso_wandprop", "Kill", "", 0.20, null);
-			EntFire("itemZM_expulso_entree", "Kill", "", 0.30, null);
-			EntFire("spxZM_effect_static_expulso", "Kill", "", 0.30, null);
-			if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_expulso_template", "ForceSpawn", "", 80.40, null);}
-		}
+        try
+        {
+            if(EXPULSOCALL.GetMoveParent() != EXPULSOACT)
+            {
+                TickCheckExpulso = false;
+                EXPULSOACT = null;
+                EXPULSOONCE = true;
+                EntFire("spxZM_expulso_trigger", "Disable", "", 0.00, null);
+                EntFire("spxZM_effect_static_expulso", "Stop", "", 0.10, null);
+                EntFire("spxZM_effect_wand_expulso", "Stop", "", 0.10, null);
+                EntFire("spxZM_expulso_e*", "Stop", "", 0.10, null);
+                EntFire("spxZM_effect_wand_expulso", "Kill", "", 0.20, null);
+                EntFire("spxZM_expulso_button", "Kill", "", 0.20, null);
+                EntFire("spxZM_expulso_e*", "Kill", "", 0.20, null);
+                EntFire("spxZM_expulso_knife", "Kill", "", 0.20, null);
+                EntFire("spxZM_expulso_trigger", "Kill", "", 0.20, null);
+                EntFire("spxZM_expulso_wandprop", "Kill", "", 0.20, null);
+                EntFire("itemZM_expulso_entree", "Kill", "", 0.30, null);
+                EntFire("spxZM_effect_static_expulso", "Kill", "", 0.30, null);
+                if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_expulso_template", "ForceSpawn", "", 80.40, null);}
+            }
+        } catch(exception)
+        {
+            TickCheckExpulso = false;
+            EXPULSOACT = null;
+            EXPULSOONCE = true;
+            EntFire("spxZM_expulso_trigger", "Disable", "", 0.00, null);
+            EntFire("spxZM_effect_static_expulso", "Stop", "", 0.10, null);
+            EntFire("spxZM_effect_wand_expulso", "Stop", "", 0.10, null);
+            EntFire("spxZM_expulso_e*", "Stop", "", 0.10, null);
+            EntFire("spxZM_effect_wand_expulso", "Kill", "", 0.20, null);
+            EntFire("spxZM_expulso_button", "Kill", "", 0.20, null);
+            EntFire("spxZM_expulso_e*", "Kill", "", 0.20, null);
+            EntFire("spxZM_expulso_knife", "Kill", "", 0.20, null);
+            EntFire("spxZM_expulso_trigger", "Kill", "", 0.20, null);
+            EntFire("spxZM_expulso_wandprop", "Kill", "", 0.20, null);
+            EntFire("itemZM_expulso_entree", "Kill", "", 0.30, null);
+            EntFire("spxZM_effect_static_expulso", "Kill", "", 0.30, null);
+            if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_expulso_template", "ForceSpawn", "", 80.40, null);}
+        }
         
         EntFireByHandle(self,"RunScriptCode","CheckOwnerExpulso();",5.00,null,null);
     }
@@ -2381,12 +2513,14 @@ function ExpulsoReceivedLevel()
     if(ZMITEMLVLUP < 7)
     {
         EntFire("!activator","RunScriptCode","PersonalItemText(9, 0);",3.00,EXPULSOACT);
-		EntFire("console","Command","sm_setcooldown 9129450 80",3.00,null);
+        EntFire("console","Command","sm_setcooldown 9129450 80",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 9129450 \"ZM Expulso|Lv.0|\"",0.00,null);
     }
     else if(ZMITEMLVLUP >= 7)
     {
         EntFire("!activator","RunScriptCode","PersonalItemText(9, 1);",3.00,EXPULSOACT);
-		EntFire("console","Command","sm_setcooldown 9129450 75",3.00,null);
+        EntFire("console","Command","sm_setcooldown 9129450 75",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 9129450 \"ZM Expulso|Lv.1|\"",0.00,null);
     }
 }
 
@@ -2464,30 +2598,30 @@ function CheckOwnerDeprimo()
 {
     if(TickCheckDeprimo)
     {
-		try
-		{
-			if(DEPRIMOCALL.GetMoveParent() != DEPRIMOACT)
-			{
-				TickCheckDeprimo = false;
-				DEPRIMOONCE = true;
-				DEPRIMOACT = null;
-				EntFire("spxZM_deprimo_trig*", "Disable", "", 0.00, null);
-				EntFire("spxZM_deprimo_e*", "Stop", "", 0.10, null);
-				EntFire("spxZM_effect_wand_deprimo", "Stop", "", 0.10, null);
-				EntFire("spxZM_effect_static_deprimo", "Stop", "", 0.10, null);
-				EntFire("spxZM_deprimo_trig*", "Kill", "", 0.20, null);
-				EntFire("spxZM_deprimo_button", "Kill", "", 0.20, null);
-				EntFire("spxZM_deprimo_e*", "Kill", "", 0.20, null);
-				EntFire("spxZM_deprimo_knife", "Kill", "", 0.20, null);
-				EntFire("spxZM_deprimo_wandprop", "Kill", "", 0.20, null);
-				EntFire("spxZM_effect_wand_deprimo", "Kill", "", 0.20, null);
-				EntFire("spxZM_effect_static_deprimo", "Kill", "", 0.30, null);
-				EntFire("itemZM_deprimo_entree", "Kill", "", 0.30, null);
-				if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_deprimo_template", "ForceSpawn", "", 60.40, null);}
-			}
-		} catch(exception)
-		{
-			TickCheckDeprimo = false;
+        try
+        {
+            if(DEPRIMOCALL.GetMoveParent() != DEPRIMOACT)
+            {
+                TickCheckDeprimo = false;
+                DEPRIMOONCE = true;
+                DEPRIMOACT = null;
+                EntFire("spxZM_deprimo_trig*", "Disable", "", 0.00, null);
+                EntFire("spxZM_deprimo_e*", "Stop", "", 0.10, null);
+                EntFire("spxZM_effect_wand_deprimo", "Stop", "", 0.10, null);
+                EntFire("spxZM_effect_static_deprimo", "Stop", "", 0.10, null);
+                EntFire("spxZM_deprimo_trig*", "Kill", "", 0.20, null);
+                EntFire("spxZM_deprimo_button", "Kill", "", 0.20, null);
+                EntFire("spxZM_deprimo_e*", "Kill", "", 0.20, null);
+                EntFire("spxZM_deprimo_knife", "Kill", "", 0.20, null);
+                EntFire("spxZM_deprimo_wandprop", "Kill", "", 0.20, null);
+                EntFire("spxZM_effect_wand_deprimo", "Kill", "", 0.20, null);
+                EntFire("spxZM_effect_static_deprimo", "Kill", "", 0.30, null);
+                EntFire("itemZM_deprimo_entree", "Kill", "", 0.30, null);
+                if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_deprimo_template", "ForceSpawn", "", 60.40, null);}
+            }
+        } catch(exception)
+        {
+            TickCheckDeprimo = false;
             DEPRIMOONCE = true;
             DEPRIMOACT = null;
             EntFire("spxZM_deprimo_trig*", "Disable", "", 0.00, null);
@@ -2503,7 +2637,7 @@ function CheckOwnerDeprimo()
             EntFire("spxZM_effect_static_deprimo", "Kill", "", 0.30, null);
             EntFire("itemZM_deprimo_entree", "Kill", "", 0.30, null);
             if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_deprimo_template", "ForceSpawn", "", 60.40, null);}
-		}
+        }
         
         EntFireByHandle(self,"RunScriptCode","CheckOwnerDeprimo();",5.00,null,null);
     }
@@ -2514,12 +2648,14 @@ function DeprimoReceivedLevel()
     if(ZMITEMLVLUP < 7)
     {
         EntFire("!activator","RunScriptCode","PersonalItemText(10, 0);",3.00,DEPRIMOACT);
-		EntFire("console","Command","sm_setcooldown 9128865 60",3.00,null);
+        EntFire("console","Command","sm_setcooldown 9128865 60",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 9128865 \"ZM Deprimo|Lv.0|\"",0.00,null);
     }
     else if(ZMITEMLVLUP >= 7)
     {
         EntFire("!activator","RunScriptCode","PersonalItemText(10, 1);",3.00,DEPRIMOACT);
-		EntFire("console","Command","sm_setcooldown 9128865 55",3.00,null);
+        EntFire("console","Command","sm_setcooldown 9128865 55",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 9128865 \"ZM Deprimo|Lv.1|\"",0.00,null);
     }
 }
 
@@ -2599,30 +2735,30 @@ function CheckOwnerConfundus()
 {
     if(TickCheckConfundus)
     {
-		try
-		{
-			if(CONFUNDUSCALL.GetMoveParent() != CONFUNDUSACT)
-			{
-				TickCheckConfundus = false;
-				CONFUNDUSONCE = true;
-				CONFUNDUSACT = null;
-				EntFire("spxZM_confundus_trig*", "Disable", "", 0.00, null);
-				EntFire("spxZM_confundus_e*", "Stop", "", 0.10, null);
-				EntFire("spxZM_effect_wand_confundus", "Stop", "", 0.10, null);
-				EntFire("spxZM_effect_static_confundus", "Stop", "", 0.10, null);
-				EntFire("spxZM_confundus_trig*", "Kill", "", 0.20, null);
-				EntFire("spxZM_confundus_button", "Kill", "", 0.20, null);
-				EntFire("spxZM_confundus_e*", "Kill", "", 0.20, null);
-				EntFire("spxZM_confundus_knife", "Kill", "", 0.20, null);
-				EntFire("spxZM_confundus_wandprop", "Kill", "", 0.20, null);
-				EntFire("spxZM_effect_wand_confundus", "Kill", "", 0.20, null);
-				EntFire("spxZM_effect_static_confundus", "Kill", "", 0.30, null);
-				EntFire("itemZM_confundus_entree", "Kill", "", 0.30, null);
-				if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_confundus_template", "ForceSpawn", "", 40.40, null);}
-			}
-		} catch(exception)
-		{
-			TickCheckConfundus = false;
+        try
+        {
+            if(CONFUNDUSCALL.GetMoveParent() != CONFUNDUSACT)
+            {
+                TickCheckConfundus = false;
+                CONFUNDUSONCE = true;
+                CONFUNDUSACT = null;
+                EntFire("spxZM_confundus_trig*", "Disable", "", 0.00, null);
+                EntFire("spxZM_confundus_e*", "Stop", "", 0.10, null);
+                EntFire("spxZM_effect_wand_confundus", "Stop", "", 0.10, null);
+                EntFire("spxZM_effect_static_confundus", "Stop", "", 0.10, null);
+                EntFire("spxZM_confundus_trig*", "Kill", "", 0.20, null);
+                EntFire("spxZM_confundus_button", "Kill", "", 0.20, null);
+                EntFire("spxZM_confundus_e*", "Kill", "", 0.20, null);
+                EntFire("spxZM_confundus_knife", "Kill", "", 0.20, null);
+                EntFire("spxZM_confundus_wandprop", "Kill", "", 0.20, null);
+                EntFire("spxZM_effect_wand_confundus", "Kill", "", 0.20, null);
+                EntFire("spxZM_effect_static_confundus", "Kill", "", 0.30, null);
+                EntFire("itemZM_confundus_entree", "Kill", "", 0.30, null);
+                if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_confundus_template", "ForceSpawn", "", 40.40, null);}
+            }
+        } catch(exception)
+        {
+            TickCheckConfundus = false;
             CONFUNDUSONCE = true;
             CONFUNDUSACT = null;
             EntFire("spxZM_confundus_trig*", "Disable", "", 0.00, null);
@@ -2638,7 +2774,7 @@ function CheckOwnerConfundus()
             EntFire("spxZM_effect_static_confundus", "Kill", "", 0.30, null);
             EntFire("itemZM_confundus_entree", "Kill", "", 0.30, null);
             if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_confundus_template", "ForceSpawn", "", 40.40, null);}
-		}
+        }
         EntFireByHandle(self,"RunScriptCode","CheckOwnerConfundus();",5.00,null,null);
     }
 }
@@ -2648,12 +2784,14 @@ function ConfundusReceivedLevel()
     if(ZMITEMLVLUP < 7)
     {
         EntFire("!activator","RunScriptCode","PersonalItemText(11, 0);",3.00,CONFUNDUSACT);
-		EntFire("console","Command","sm_setcooldown 9128126 40",3.00,null);
+        EntFire("console","Command","sm_setcooldown 9128126 40",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 9128126 \"ZM Confundus|Lv.0|\"",0.00,null);
     }
     else if(ZMITEMLVLUP >= 7)
     {
         EntFire("!activator","RunScriptCode","PersonalItemText(11, 1);",3.00,CONFUNDUSACT);
-		EntFire("console","Command","sm_setcooldown 9128126 35",3.00,null);
+        EntFire("console","Command","sm_setcooldown 9128126 35",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 9128126 \"ZM Confundus|Lv.1|\"",0.00,null);
     }
 }
 
@@ -2733,30 +2871,30 @@ function CheckOwnerEmendo()
 {
     if(TickCheckEmendo)
     {
-		try
-		{
-			if(EMENDOCALL.GetMoveParent() != EMENDOACT)
-			{
-				TickCheckEmendo = false;
-				EMENDOONCE = true;
-				EMENDOACT = null;
-				EntFire("spxZM_emendo_trig*", "Disable", "", 0.00, null);
-				EntFire("spxZM_emendo_e*", "Stop", "", 0.10, null);
-				EntFire("spxZM_effect_wand_emendo", "Stop", "", 0.10, null);
-				EntFire("spxZM_effect_static_emendo", "Stop", "", 0.10, null);
-				EntFire("spxZM_emendo_trig*", "Kill", "", 0.20, null);
-				EntFire("spxZM_emendo_button", "Kill", "", 0.20, null);
-				EntFire("spxZM_emendo_e*", "Kill", "", 0.20, null);
-				EntFire("spxZM_emendo_knife", "Kill", "", 0.20, null);
-				EntFire("spxZM_emendo_wandprop", "Kill", "", 0.20, null);
-				EntFire("spxZM_effect_wand_emendo", "Kill", "", 0.20, null);
-				EntFire("spxZM_effect_static_emendo", "Kill", "", 0.30, null);
-				EntFire("itemZM_emendo_entree", "Kill", "", 0.30, null);
-				if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_emendo_template", "ForceSpawn", "", 50.40, null);}
-			}
-		} catch(exception)
-		{
-			TickCheckEmendo = false;
+        try
+        {
+            if(EMENDOCALL.GetMoveParent() != EMENDOACT)
+            {
+                TickCheckEmendo = false;
+                EMENDOONCE = true;
+                EMENDOACT = null;
+                EntFire("spxZM_emendo_trig*", "Disable", "", 0.00, null);
+                EntFire("spxZM_emendo_e*", "Stop", "", 0.10, null);
+                EntFire("spxZM_effect_wand_emendo", "Stop", "", 0.10, null);
+                EntFire("spxZM_effect_static_emendo", "Stop", "", 0.10, null);
+                EntFire("spxZM_emendo_trig*", "Kill", "", 0.20, null);
+                EntFire("spxZM_emendo_button", "Kill", "", 0.20, null);
+                EntFire("spxZM_emendo_e*", "Kill", "", 0.20, null);
+                EntFire("spxZM_emendo_knife", "Kill", "", 0.20, null);
+                EntFire("spxZM_emendo_wandprop", "Kill", "", 0.20, null);
+                EntFire("spxZM_effect_wand_emendo", "Kill", "", 0.20, null);
+                EntFire("spxZM_effect_static_emendo", "Kill", "", 0.30, null);
+                EntFire("itemZM_emendo_entree", "Kill", "", 0.30, null);
+                if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_emendo_template", "ForceSpawn", "", 50.40, null);}
+            }
+        } catch(exception)
+        {
+            TickCheckEmendo = false;
             EMENDOONCE = true;
             EMENDOACT = null;
             EntFire("spxZM_emendo_trig*", "Disable", "", 0.00, null);
@@ -2772,7 +2910,7 @@ function CheckOwnerEmendo()
             EntFire("spxZM_effect_static_emendo", "Kill", "", 0.30, null);
             EntFire("itemZM_emendo_entree", "Kill", "", 0.30, null);
             if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_emendo_template", "ForceSpawn", "", 50.40, null);}
-		}
+        }
         EntFireByHandle(self,"RunScriptCode","CheckOwnerEmendo();",5.00,null,null);
     }
 }
@@ -2782,12 +2920,14 @@ function EmendoReceivedLevel()
     if(ZMITEMLVLUP < 7)
     {
         EntFire("!activator","RunScriptCode","PersonalItemText(12, 0);",3.00,EMENDOACT);
-		EntFire("console","Command","sm_setcooldown 9127617 50",3.00,null);
+        EntFire("console","Command","sm_setcooldown 9127617 50",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 9127617 \"ZM Emendo|Lv.0|\"",0.00,null);
     }
     else if(ZMITEMLVLUP >= 7)
     {
         EntFire("!activator","RunScriptCode","PersonalItemText(12, 1);",3.00,EMENDOACT);
-		EntFire("console","Command","sm_setcooldown 9127617 45",3.00,null);
+        EntFire("console","Command","sm_setcooldown 9127617 45",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 9127617 \"ZM Emendo|Lv.1|\"",0.00,null);
     }
 }
 
@@ -2867,30 +3007,30 @@ function CheckOwnerZMIncendio()
 {
     if(TickCheckIncendio)
     {
-		try
-		{
-			if(ZMINCENDIOCALL.GetMoveParent() != ZMINCENDIOACT)
-			{
-				TickCheckIncendio = false;
-				ZMINCENDIOONCE = true;
-				ZMINCENDIOACT = null;
-				EntFire("spxZM_incendio_trig*", "Disable", "", 0.00, null);
-				EntFire("spxZM_incendio_e*", "Stop", "", 0.10, null);
-				EntFire("spxZM_effect_wand_incendio", "Stop", "", 0.10, null);
-				EntFire("spxZM_effect_static_incendio", "Stop", "", 0.10, null);
-				EntFire("spxZM_incendio_trig*", "Kill", "", 0.20, null);
-				EntFire("spxZM_incendio_button", "Kill", "", 0.20, null);
-				EntFire("spxZM_incendio_e*", "Kill", "", 0.20, null);
-				EntFire("spxZM_incendio_knife", "Kill", "", 0.20, null);
-				EntFire("spxZM_incendio_wandprop", "Kill", "", 0.20, null);
-				EntFire("spxZM_effect_wand_incendio", "Kill", "", 0.20, null);
-				EntFire("spxZM_effect_static_incendio", "Kill", "", 0.30, null);
-				EntFire("itemZM_incendio_entree", "Kill", "", 0.30, null);
-				if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_incendio_template", "ForceSpawn", "", 60.40, null);}
-			}
-		} catch(exception)
-		{
-			TickCheckIncendio = false;
+        try
+        {
+            if(ZMINCENDIOCALL.GetMoveParent() != ZMINCENDIOACT)
+            {
+                TickCheckIncendio = false;
+                ZMINCENDIOONCE = true;
+                ZMINCENDIOACT = null;
+                EntFire("spxZM_incendio_trig*", "Disable", "", 0.00, null);
+                EntFire("spxZM_incendio_e*", "Stop", "", 0.10, null);
+                EntFire("spxZM_effect_wand_incendio", "Stop", "", 0.10, null);
+                EntFire("spxZM_effect_static_incendio", "Stop", "", 0.10, null);
+                EntFire("spxZM_incendio_trig*", "Kill", "", 0.20, null);
+                EntFire("spxZM_incendio_button", "Kill", "", 0.20, null);
+                EntFire("spxZM_incendio_e*", "Kill", "", 0.20, null);
+                EntFire("spxZM_incendio_knife", "Kill", "", 0.20, null);
+                EntFire("spxZM_incendio_wandprop", "Kill", "", 0.20, null);
+                EntFire("spxZM_effect_wand_incendio", "Kill", "", 0.20, null);
+                EntFire("spxZM_effect_static_incendio", "Kill", "", 0.30, null);
+                EntFire("itemZM_incendio_entree", "Kill", "", 0.30, null);
+                if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_incendio_template", "ForceSpawn", "", 60.40, null);}
+            }
+        } catch(exception)
+        {
+            TickCheckIncendio = false;
             ZMINCENDIOONCE = true;
             ZMINCENDIOACT = null;
             EntFire("spxZM_incendio_trig*", "Disable", "", 0.00, null);
@@ -2906,7 +3046,7 @@ function CheckOwnerZMIncendio()
             EntFire("spxZM_effect_static_incendio", "Kill", "", 0.30, null);
             EntFire("itemZM_incendio_entree", "Kill", "", 0.30, null);
             if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_incendio_template", "ForceSpawn", "", 60.40, null);}
-		}
+        }
         EntFireByHandle(self,"RunScriptCode","CheckOwnerZMIncendio();",5.00,null,null);
     }
 }
@@ -2916,12 +3056,14 @@ function ZMIncendioReceivedLevel()
     if(ZMITEMLVLUP < 7)
     {
         EntFire("!activator","RunScriptCode","PersonalItemText(13, 0);",3.00,ZMINCENDIOACT);
-		EntFire("console","Command","sm_setcooldown 9125676 60",3.00,null);
+        EntFire("console","Command","sm_setcooldown 9125676 60",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 9125676 \"ZM Incendio|Lv.0|\"",0.00,null);
     }
     else if(ZMITEMLVLUP >= 7)
     {
         EntFire("!activator","RunScriptCode","PersonalItemText(13, 1);",3.00,ZMINCENDIOACT);
-		EntFire("console","Command","sm_setcooldown 9125676 55",3.00,null);
+        EntFire("console","Command","sm_setcooldown 9125676 55",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 9125676 \"ZM Incendio|Lv.1|\"",0.00,null);
     }
 }
 
@@ -3001,30 +3143,30 @@ function CheckOwnerDisillusionment()
 {
     if(TickCheckDisillusionment)
     {
-		try
-		{
-			if(DISILLUSIONMENTCALL.GetMoveParent() != DISILLUSIONMENTACT)
-			{
-				TickCheckDisillusionment = false;
-				DISILLUSIONMENTONCE = true;
-				DISILLUSIONMENTACT = null;
-				EntFire("spxZM_disillu_trig*", "Disable", "", 0.00, null);
-				EntFire("spxZM_disillu_e*", "Stop", "", 0.10, null);
-				EntFire("spxZM_effect_wand_disillu", "Stop", "", 0.10, null);
-				EntFire("spxZM_effect_static_disillu", "Stop", "", 0.10, null);
-				EntFire("spxZM_disillu_trig*", "Kill", "", 0.20, null);
-				EntFire("spxZM_disillu_button", "Kill", "", 0.20, null);
-				EntFire("spxZM_disillu_e*", "Kill", "", 0.20, null);
-				EntFire("spxZM_disillu_knife", "Kill", "", 0.20, null);
-				EntFire("spxZM_disillu_wandprop", "Kill", "", 0.20, null);
-				EntFire("spxZM_effect_wand_disillu", "Kill", "", 0.20, null);
-				EntFire("spxZM_effect_static_disillu", "Kill", "", 0.30, null);
-				EntFire("itemZM_disillu_entree", "Kill", "", 0.30, null);
-				if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_disillu_template", "ForceSpawn", "", 50.40, null);}
-			}
-		} catch(exception)
-		{
-			TickCheckDisillusionment = false;
+        try
+        {
+            if(DISILLUSIONMENTCALL.GetMoveParent() != DISILLUSIONMENTACT)
+            {
+                TickCheckDisillusionment = false;
+                DISILLUSIONMENTONCE = true;
+                DISILLUSIONMENTACT = null;
+                EntFire("spxZM_disillu_trig*", "Disable", "", 0.00, null);
+                EntFire("spxZM_disillu_e*", "Stop", "", 0.10, null);
+                EntFire("spxZM_effect_wand_disillu", "Stop", "", 0.10, null);
+                EntFire("spxZM_effect_static_disillu", "Stop", "", 0.10, null);
+                EntFire("spxZM_disillu_trig*", "Kill", "", 0.20, null);
+                EntFire("spxZM_disillu_button", "Kill", "", 0.20, null);
+                EntFire("spxZM_disillu_e*", "Kill", "", 0.20, null);
+                EntFire("spxZM_disillu_knife", "Kill", "", 0.20, null);
+                EntFire("spxZM_disillu_wandprop", "Kill", "", 0.20, null);
+                EntFire("spxZM_effect_wand_disillu", "Kill", "", 0.20, null);
+                EntFire("spxZM_effect_static_disillu", "Kill", "", 0.30, null);
+                EntFire("itemZM_disillu_entree", "Kill", "", 0.30, null);
+                if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_disillu_template", "ForceSpawn", "", 50.40, null);}
+            }
+        } catch(exception)
+        {
+            TickCheckDisillusionment = false;
             DISILLUSIONMENTONCE = true;
             DISILLUSIONMENTACT = null;
             EntFire("spxZM_disillu_trig*", "Disable", "", 0.00, null);
@@ -3040,7 +3182,7 @@ function CheckOwnerDisillusionment()
             EntFire("spxZM_effect_static_disillu", "Kill", "", 0.30, null);
             EntFire("itemZM_disillu_entree", "Kill", "", 0.30, null);
             if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_disillu_template", "ForceSpawn", "", 50.40, null);}
-		}
+        }
         EntFireByHandle(self,"RunScriptCode","CheckOwnerDisillusionment();",5.00,null,null);
     }
 }
@@ -3050,12 +3192,14 @@ function DisillusionmentReceivedLevel()
     if(ZMITEMLVLUP < 7)
     {
         EntFire("!activator","RunScriptCode","PersonalItemText(14, 0);",3.00,DISILLUSIONMENTACT);
-		EntFire("console","Command","sm_setcooldown 17845958 50",3.00,null);
+        EntFire("console","Command","sm_setcooldown 17845958 50",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 17845958 \"ZM Disillusionment|Lv.0|\"",0.00,null);
     }
     else if(ZMITEMLVLUP >= 7)
     {
         EntFire("!activator","RunScriptCode","PersonalItemText(14, 1);",3.00,DISILLUSIONMENTACT);
-		EntFire("console","Command","sm_setcooldown 17845958 45",3.00,null);
+        EntFire("console","Command","sm_setcooldown 17845958 45",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 17845958 \"ZM Disillusionment|Lv.1|\"",0.00,null);
     }
 }
 
@@ -3134,46 +3278,46 @@ function CheckOwnerConjunctivitus()
 {
     if(TickCheckConjunctivitus)
     {
-		try
-		{
-			if(CONJUNCTIVITUSCALL.GetMoveParent() != CONJUNCTIVITUSACT)
-			{
-				TickCheckConjunctivitus = false;
-				CONJUNCTIVITUSONCE = true;
-				CONJUNCTIVITUSACT = null;
-				EntFire("spxZM_conjunct_trig*", "Disable", "", 0.00, null);
-				EntFire("spxZM_conjunct_e*", "Stop", "", 0.10, null);
-				EntFire("spxZM_effect_wand_conjunct", "Stop", "", 0.10, null);
-				EntFire("spxZM_effect_static_conjunct", "Stop", "", 0.10, null);
-				EntFire("spxZM_conjunct_trig*", "Kill", "", 0.20, null);
-				EntFire("spxZM_conjunct_button", "Kill", "", 0.20, null);
-				EntFire("spxZM_conjunct_e*", "Kill", "", 0.20, null);
-				EntFire("spxZM_conjunct_knife", "Kill", "", 0.20, null);
-				EntFire("spxZM_conjunct_wandprop", "Kill", "", 0.20, null);
-				EntFire("spxZM_effect_wand_conjunct", "Kill", "", 0.20, null);
-				EntFire("spxZM_effect_static_conjunct", "Kill", "", 0.30, null);
-				EntFire("itemZM_conjunct_entree", "Kill", "", 0.30, null);
-				if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_conjunct_template", "ForceSpawn", "", 40.40, null);}
-			}
-		} catch(exception)
-		{
-			TickCheckConjunctivitus = false;
-			CONJUNCTIVITUSONCE = true;
-			CONJUNCTIVITUSACT = null;
-			EntFire("spxZM_conjunct_trig*", "Disable", "", 0.00, null);
-			EntFire("spxZM_conjunct_e*", "Stop", "", 0.10, null);
-			EntFire("spxZM_effect_wand_conjunct", "Stop", "", 0.10, null);
-			EntFire("spxZM_effect_static_conjunct", "Stop", "", 0.10, null);
-			EntFire("spxZM_conjunct_trig*", "Kill", "", 0.20, null);
-			EntFire("spxZM_conjunct_button", "Kill", "", 0.20, null);
-			EntFire("spxZM_conjunct_e*", "Kill", "", 0.20, null);
-			EntFire("spxZM_conjunct_knife", "Kill", "", 0.20, null);
-			EntFire("spxZM_conjunct_wandprop", "Kill", "", 0.20, null);
-			EntFire("spxZM_effect_wand_conjunct", "Kill", "", 0.20, null);
-			EntFire("spxZM_effect_static_conjunct", "Kill", "", 0.30, null);
-			EntFire("itemZM_conjunct_entree", "Kill", "", 0.30, null);
-			if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_conjunct_template", "ForceSpawn", "", 40.40, null);}
-		}
+        try
+        {
+            if(CONJUNCTIVITUSCALL.GetMoveParent() != CONJUNCTIVITUSACT)
+            {
+                TickCheckConjunctivitus = false;
+                CONJUNCTIVITUSONCE = true;
+                CONJUNCTIVITUSACT = null;
+                EntFire("spxZM_conjunct_trig*", "Disable", "", 0.00, null);
+                EntFire("spxZM_conjunct_e*", "Stop", "", 0.10, null);
+                EntFire("spxZM_effect_wand_conjunct", "Stop", "", 0.10, null);
+                EntFire("spxZM_effect_static_conjunct", "Stop", "", 0.10, null);
+                EntFire("spxZM_conjunct_trig*", "Kill", "", 0.20, null);
+                EntFire("spxZM_conjunct_button", "Kill", "", 0.20, null);
+                EntFire("spxZM_conjunct_e*", "Kill", "", 0.20, null);
+                EntFire("spxZM_conjunct_knife", "Kill", "", 0.20, null);
+                EntFire("spxZM_conjunct_wandprop", "Kill", "", 0.20, null);
+                EntFire("spxZM_effect_wand_conjunct", "Kill", "", 0.20, null);
+                EntFire("spxZM_effect_static_conjunct", "Kill", "", 0.30, null);
+                EntFire("itemZM_conjunct_entree", "Kill", "", 0.30, null);
+                if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_conjunct_template", "ForceSpawn", "", 40.40, null);}
+            }
+        } catch(exception)
+        {
+            TickCheckConjunctivitus = false;
+            CONJUNCTIVITUSONCE = true;
+            CONJUNCTIVITUSACT = null;
+            EntFire("spxZM_conjunct_trig*", "Disable", "", 0.00, null);
+            EntFire("spxZM_conjunct_e*", "Stop", "", 0.10, null);
+            EntFire("spxZM_effect_wand_conjunct", "Stop", "", 0.10, null);
+            EntFire("spxZM_effect_static_conjunct", "Stop", "", 0.10, null);
+            EntFire("spxZM_conjunct_trig*", "Kill", "", 0.20, null);
+            EntFire("spxZM_conjunct_button", "Kill", "", 0.20, null);
+            EntFire("spxZM_conjunct_e*", "Kill", "", 0.20, null);
+            EntFire("spxZM_conjunct_knife", "Kill", "", 0.20, null);
+            EntFire("spxZM_conjunct_wandprop", "Kill", "", 0.20, null);
+            EntFire("spxZM_effect_wand_conjunct", "Kill", "", 0.20, null);
+            EntFire("spxZM_effect_static_conjunct", "Kill", "", 0.30, null);
+            EntFire("itemZM_conjunct_entree", "Kill", "", 0.30, null);
+            if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_conjunct_template", "ForceSpawn", "", 40.40, null);}
+        }
         EntFireByHandle(self,"RunScriptCode","CheckOwnerConjunctivitus();",5.00,null,null);
     }
 }
@@ -3183,12 +3327,14 @@ function ConjunctivitusReceivedLevel()
     if(ZMITEMLVLUP < 7)
     {
         EntFire("!activator","RunScriptCode","PersonalItemText(15, 0);",3.00,CONJUNCTIVITUSACT);
-		EntFire("console","Command","sm_setcooldown 17846183 40",3.00,null);
+        EntFire("console","Command","sm_setcooldown 17846183 40",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 17846183 \"ZM Conjunctivitus|Lv.0|\"",0.00,null);
     }
     else if(ZMITEMLVLUP >= 7)
     {
         EntFire("!activator","RunScriptCode","PersonalItemText(15, 1);",3.00,CONJUNCTIVITUSACT);
-		EntFire("console","Command","sm_setcooldown 17846183 35",3.00,null);
+        EntFire("console","Command","sm_setcooldown 17846183 35",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 17846183 \"ZM Conjunctivitus|Lv.1|\"",0.00,null);
     }
 }
 
@@ -3268,28 +3414,28 @@ function CheckOwnerDeletrius()
 {
     if(TickCheckDeletrius)
     {
-		try
-		{
-			if(DELETRIUSCALL.GetMoveParent() != DELETRIUSACT)
-			{
-				TickCheckDeletrius = false;
-				DELETRIUSONCE = true;
-				DELETRIUSACT = null;
-				EntFire("spxZM_deletrius_e*", "Stop", "", 0.10, null);
-				EntFire("spxZM_effect_wand_deletrius", "Stop", "", 0.10, null);
-				EntFire("spxZM_effect_static_deletrius", "Stop", "", 0.10, null);
-				EntFire("spxZM_deletrius_button", "Kill", "", 0.20, null);
-				EntFire("spxZM_deletrius_e*", "Kill", "", 0.20, null);
-				EntFire("spxZM_deletrius_knife", "Kill", "", 0.20, null);
-				EntFire("spxZM_deletrius_wandprop", "Kill", "", 0.20, null);
-				EntFire("spxZM_effect_wand_deletrius", "Kill", "", 0.20, null);
-				EntFire("spxZM_effect_static_deletrius", "Kill", "", 0.30, null);
-				EntFire("itemZM_deletrius_entree", "Kill", "", 0.30, null);
-				if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_deletrius_template", "ForceSpawn", "", 0.40, null);}
-			}
-		} catch(exception)
-		{
-			TickCheckDeletrius = false;
+        try
+        {
+            if(DELETRIUSCALL.GetMoveParent() != DELETRIUSACT)
+            {
+                TickCheckDeletrius = false;
+                DELETRIUSONCE = true;
+                DELETRIUSACT = null;
+                EntFire("spxZM_deletrius_e*", "Stop", "", 0.10, null);
+                EntFire("spxZM_effect_wand_deletrius", "Stop", "", 0.10, null);
+                EntFire("spxZM_effect_static_deletrius", "Stop", "", 0.10, null);
+                EntFire("spxZM_deletrius_button", "Kill", "", 0.20, null);
+                EntFire("spxZM_deletrius_e*", "Kill", "", 0.20, null);
+                EntFire("spxZM_deletrius_knife", "Kill", "", 0.20, null);
+                EntFire("spxZM_deletrius_wandprop", "Kill", "", 0.20, null);
+                EntFire("spxZM_effect_wand_deletrius", "Kill", "", 0.20, null);
+                EntFire("spxZM_effect_static_deletrius", "Kill", "", 0.30, null);
+                EntFire("itemZM_deletrius_entree", "Kill", "", 0.30, null);
+                if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_deletrius_template", "ForceSpawn", "", 0.40, null);}
+            }
+        } catch(exception)
+        {
+            TickCheckDeletrius = false;
             DELETRIUSONCE = true;
             DELETRIUSACT = null;
             EntFire("spxZM_deletrius_e*", "Stop", "", 0.10, null);
@@ -3303,7 +3449,7 @@ function CheckOwnerDeletrius()
             EntFire("spxZM_effect_static_deletrius", "Kill", "", 0.30, null);
             EntFire("itemZM_deletrius_entree", "Kill", "", 0.30, null);
             if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_deletrius_template", "ForceSpawn", "", 0.40, null);}
-		}
+        }
         EntFireByHandle(self,"RunScriptCode","CheckOwnerDeletrius();",5.00,null,null);
     }
 }
@@ -3313,10 +3459,12 @@ function DeletriusReceivedLevel()
     if(ZMITEMLVLUP < 7)
     {
         EntFire("!activator","RunScriptCode","PersonalItemText(16, 0);",3.00,DELETRIUSACT);
+        EntFire("console","Command","sm_ewsetshortname 17846257 \"ZM Deletrius|Lv.0|\"",0.00,null);
     }
     else if(ZMITEMLVLUP >= 7)
     {
         EntFire("!activator","RunScriptCode","PersonalItemText(16, 1);",3.00,DELETRIUSACT);
+        EntFire("console","Command","sm_ewsetshortname 17846257 \"ZM Deletrius|Lv.1|\"",0.00,null);
     }
 }
 
@@ -3328,43 +3476,43 @@ function UseItemDeletrius()
         {
             if(rnd <= 7)
             {
-				DELETRIUSENABLEAVADA = false;
-				DELETRIUSENABLEACCIO = false;
+                DELETRIUSENABLEAVADA = false;
+                DELETRIUSENABLEACCIO = false;
                 EntFire("spxZM_deletrius_effect_*", "Stop", "", 1.00, null);
-	            EntFire("spxZM_deletrius_button", "Lock", "", 1.00, null);
-	            EntFire("spx_protego_spwnr_prop*", "Break", "", 0.00, null);
-				EntFire("spx_protego_spwnr_trig*", "Disable", "", 0.00,null);
-	            EntFire("spx_accio_t*", "Disable", "", 0.00, null);
-	            EntFire("spx_aguamenti_triggers*", "Disable", "", 0.00, null);
-	            EntFire("spx_crucio_trigger*", "Disable", "", 0.00, null);
-	            EntFire("spx_repairo_trigger*", "Disable", "", 0.00, null);
-	            EntFire("spx_flipendo_trigger*", "Disable", "", 0.00, null);
-	            EntFire("spx_impedimenta_trig_*", "Disable", "", 0.00, null);
-	            EntFire("spx_incendio_trigger*", "Disable", "", 0.00, null);
-	            EntFire("spx_accio_effect_active*", "Stop", "", 0.30, null);
-	            EntFire("spx_aguamenti_effect_active*", "Stop", "", 0.30, null);
-	            EntFire("spx_crucio_effect_active*", "Stop", "", 0.30, null);
-	            EntFire("spx_repairo_effect_active*", "Stop", "", 0.30, null);
-	            EntFire("spx_flipendo_effect_active*", "Stop", "", 0.30, null);
-	            EntFire("spx_impedimenta_effect_active*", "Stop", "", 0.30, null);
-	            EntFire("spx_incendio_effect_active*", "Stop", "", 0.30, null);
-	            EntFire("spxZM_deletrius_effect_active", "Start", "", 0.20, null);
-	            EntFire("spxZM_effect_wand_deletrius", "Stop", "", 0.40, null);
-	            EntFire("map_sound_wands", "PlaySound", "", 0.10, null);
-	            EntFire("spx_avada_effect_active*", "Stop", "", 0.30, null);
-	            EntFire("spx_avada_trigger*", "Disable", "", 0.00, null);
-	            EntFire("respawn_deletrius_*", "Kill", "", 0.50, null);
-	            EntFire("spxZM_effect_wand_deletrius", "Kill", "", 3.00, null);
-	            EntFire("spxZM_deletrius_wandprop", "Kill", "", 3.00, null);
-	            EntFire("spxZM_deletrius_effect_*", "Kill", "", 3.00, null);
-	            EntFire("spxZM_deletrius_case", "Kill", "", 3.00, null);
-	            EntFire("spxZM_deletrius_button", "Kill", "", 3.00, null);
-	            EntFire("spxZM_effect_wand_deletrius", "ClearParent", "", 2.00, null);
-	            EntFire("spxZM_deletrius_wandprop", "ClearParent", "", 2.00, null);
-	            EntFire("spxZM_deletrius_button", "ClearParent", "", 2.00, null);
-	            EntFire("spxZM_deletrius_effect_*", "ClearParent", "", 2.00, null);
-	            EntFire("respawn_deletrius_template", "Kill", "", 0.20, null);
-	            EntFire("spxZM_deletrius_wandprop", "Color", "255 28 28", 0.20, null);
+                EntFire("spxZM_deletrius_button", "Lock", "", 1.00, null);
+                EntFire("spx_protego_spwnr_prop*", "Break", "", 0.00, null);
+                EntFire("spx_protego_spwnr_trig*", "Disable", "", 0.00,null);
+                EntFire("spx_accio_t*", "Disable", "", 0.00, null);
+                EntFire("spx_aguamenti_triggers*", "Disable", "", 0.00, null);
+                EntFire("spx_crucio_trigger*", "Disable", "", 0.00, null);
+                EntFire("spx_repairo_trigger*", "Disable", "", 0.00, null);
+                EntFire("spx_flipendo_trigger*", "Disable", "", 0.00, null);
+                EntFire("spx_impedimenta_trig_*", "Disable", "", 0.00, null);
+                EntFire("spx_incendio_trigger*", "Disable", "", 0.00, null);
+                EntFire("spx_accio_effect_active*", "Stop", "", 0.30, null);
+                EntFire("spx_aguamenti_effect_active*", "Stop", "", 0.30, null);
+                EntFire("spx_crucio_effect_active*", "Stop", "", 0.30, null);
+                EntFire("spx_repairo_effect_active*", "Stop", "", 0.30, null);
+                EntFire("spx_flipendo_effect_active*", "Stop", "", 0.30, null);
+                EntFire("spx_impedimenta_effect_active*", "Stop", "", 0.30, null);
+                EntFire("spx_incendio_effect_active*", "Stop", "", 0.30, null);
+                EntFire("spxZM_deletrius_effect_active", "Start", "", 0.20, null);
+                EntFire("spxZM_effect_wand_deletrius", "Stop", "", 0.40, null);
+                EntFire("map_sound_wands", "PlaySound", "", 0.10, null);
+                EntFire("spx_avada_effect_active*", "Stop", "", 0.30, null);
+                EntFire("spx_avada_trigger*", "Disable", "", 0.00, null);
+                EntFire("respawn_deletrius_*", "Kill", "", 0.50, null);
+                EntFire("spxZM_effect_wand_deletrius", "Kill", "", 3.00, null);
+                EntFire("spxZM_deletrius_wandprop", "Kill", "", 3.00, null);
+                EntFire("spxZM_deletrius_effect_*", "Kill", "", 3.00, null);
+                EntFire("spxZM_deletrius_case", "Kill", "", 3.00, null);
+                EntFire("spxZM_deletrius_button", "Kill", "", 3.00, null);
+                EntFire("spxZM_effect_wand_deletrius", "ClearParent", "", 2.00, null);
+                EntFire("spxZM_deletrius_wandprop", "ClearParent", "", 2.00, null);
+                EntFire("spxZM_deletrius_button", "ClearParent", "", 2.00, null);
+                EntFire("spxZM_deletrius_effect_*", "ClearParent", "", 2.00, null);
+                EntFire("respawn_deletrius_template", "Kill", "", 0.20, null);
+                EntFire("spxZM_deletrius_wandprop", "Color", "255 28 28", 0.20, null);
             }
             else 
             {
@@ -3429,28 +3577,28 @@ function CheckOwnerReducio()
 {
     if(TickCheckReducio)
     {
-		try
-		{
-			if(REDUCIOCALL.GetMoveParent() != REDUCIOACT)
-			{
-				TickCheckReducio = false;
-				REDUCIOONCE = true;
-				REDUCIOACT = null;
-				EntFire("spxZM_reducio_e*", "Stop", "", 0.10, null);
-				EntFire("spxZM_effect_wand_reducio", "Stop", "", 0.10, null);
-				EntFire("spxZM_effect_static_reducio", "Stop", "", 0.10, null);
-				EntFire("spxZM_reducio_button", "Kill", "", 0.20, null);
-				EntFire("spxZM_reducio_e*", "Kill", "", 0.20, null);
-				EntFire("spxZM_reducio_knife", "Kill", "", 0.20, null);
-				EntFire("spxZM_reducio_wandprop", "Kill", "", 0.20, null);
-				EntFire("spxZM_effect_wand_reducio", "Kill", "", 0.20, null);
-				EntFire("spxZM_effect_static_reducio", "Kill", "", 0.30, null);
-				EntFire("itemZM_reducio_entree", "Kill", "", 0.30, null);
-				if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_reducio_template", "ForceSpawn", "", 105.40, null);}
-			}
-		} catch(exception)
-		{
-			TickCheckReducio = false;
+        try
+        {
+            if(REDUCIOCALL.GetMoveParent() != REDUCIOACT)
+            {
+                TickCheckReducio = false;
+                REDUCIOONCE = true;
+                REDUCIOACT = null;
+                EntFire("spxZM_reducio_e*", "Stop", "", 0.10, null);
+                EntFire("spxZM_effect_wand_reducio", "Stop", "", 0.10, null);
+                EntFire("spxZM_effect_static_reducio", "Stop", "", 0.10, null);
+                EntFire("spxZM_reducio_button", "Kill", "", 0.20, null);
+                EntFire("spxZM_reducio_e*", "Kill", "", 0.20, null);
+                EntFire("spxZM_reducio_knife", "Kill", "", 0.20, null);
+                EntFire("spxZM_reducio_wandprop", "Kill", "", 0.20, null);
+                EntFire("spxZM_effect_wand_reducio", "Kill", "", 0.20, null);
+                EntFire("spxZM_effect_static_reducio", "Kill", "", 0.30, null);
+                EntFire("itemZM_reducio_entree", "Kill", "", 0.30, null);
+                if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_reducio_template", "ForceSpawn", "", 105.40, null);}
+            }
+        } catch(exception)
+        {
+            TickCheckReducio = false;
             REDUCIOONCE = true;
             REDUCIOACT = null;
             EntFire("spxZM_reducio_e*", "Stop", "", 0.10, null);
@@ -3464,7 +3612,7 @@ function CheckOwnerReducio()
             EntFire("spxZM_effect_static_reducio", "Kill", "", 0.30, null);
             EntFire("itemZM_reducio_entree", "Kill", "", 0.30, null);
             if(ZOMBIE_ITEM_DISABLE){EntFire("respawn_reducio_template", "ForceSpawn", "", 105.40, null);}
-		}
+        }
         EntFireByHandle(self,"RunScriptCode","CheckOwnerReducio();",5.00,null,null);
     }
 }
@@ -3474,12 +3622,14 @@ function ReducioReceivedLevel()
     if(ZMITEMLVLUP < 7)
     {
         EntFire("!activator","RunScriptCode","PersonalItemText(17, 0);",3.00,REDUCIOACT);
-		EntFire("console","Command","sm_setcooldown 20869434 105",3.00,null);
+        EntFire("console","Command","sm_setcooldown 20869434 105",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 20869434 \"ZM Reducio|Lv.0|\"",0.00,null);
     }
     else if(ZMITEMLVLUP >= 7)
     {
         EntFire("!activator","RunScriptCode","PersonalItemText(17, 1);",3.00,REDUCIOACT);
-		EntFire("console","Command","sm_setcooldown 20869434 100",3.00,null);
+        EntFire("console","Command","sm_setcooldown 20869434 100",0.00,null);
+        EntFire("console","Command","sm_ewsetshortname 20869434 \"ZM Reducio|Lv.1|\"",0.00,null);
     }
 }
 
@@ -3488,14 +3638,14 @@ function UseItemReducio()
     if(activator.GetTeam() == 2 && activator == REDUCIOACT && ZOMBIE_ITEM_DISABLE)
     { 
         local zmsm = null;
-	    while(null != (zmsm = Entities.FindInSphere(zmsm,REDUCIOACT.GetOrigin(),550)))
-	    {
-		    if(zmsm.GetTeam() == 2 && zmsm.GetHealth() > 0 && zmsm.IsValid())
-		    {
+        while(null != (zmsm = Entities.FindInSphere(zmsm,REDUCIOACT.GetOrigin(),550)))
+        {
+            if(zmsm.GetTeam() == 2 && zmsm.GetHealth() > 0 && zmsm.IsValid())
+            {
                 zmsm.SetModel("models/player/gozombie_rescale.mdl");
-				EntFire("item_speedmod","ModifySpeed","1.2",0.00,zmsm);
-		    }
-	    }
+                EntFire("item_speedmod","ModifySpeed","1.2",0.00,zmsm);
+            }
+        }
         EntFire("spxZM_reducio_button","Lock","", 0.00, null);
         EntFire("spxZM_reducio_effect_active","Start","", 0.00, null);
         EntFire("spxZM_effect_wand_reducio","Stop","", 0.00, null);
@@ -3528,14 +3678,14 @@ function UseItemReducio()
 function ResetModel()
 {
     local zmrm = null;
-	while(null != (zmrm = Entities.FindByClassname(zmrm,"player")))
-	{
-		if(zmrm.GetTeam() == 2 && zmrm.GetHealth() > 0 && zmrm.IsValid())
-		{
+    while(null != (zmrm = Entities.FindByClassname(zmrm,"player")))
+    {
+        if(zmrm.GetTeam() == 2 && zmrm.GetHealth() > 0 && zmrm.IsValid())
+        {
             zmrm.SetModel("models/player/zombie_harry.mdl");
-			EntFire("item_speedmod","ModifySpeed","1.0",0.00,zmrm);
-		}
-	}
+            EntFire("item_speedmod","ModifySpeed","1.0",0.00,zmrm);
+        }
+    }
 }
 
 function ReducioItemM()
@@ -3552,60 +3702,60 @@ function ReducioItemM()
 ////////////////////////////////
 function CheckZMPickUpItemsFix()
 {
-	if(activator==EXPULSOACT)
-	{
-		EntFire("!activator", "AddOutput", "origin 11458 9416 13614", 0.10, EXPULSOACT);
-		EntFire("personal_text", "SetText", "You already have ZM Item\nEXPULSO", 0.00, activator);
-		EntFire("personal_text", "Display", "", 0.01, activator);
-	}
-	if(activator==DEPRIMOACT)
-	{
-		EntFire("!activator", "AddOutput", "origin 11458 9416 13614", 0.10, DEPRIMOACT);
-		EntFire("personal_text", "SetText", "You already have ZM Item\nDEPRIMO", 0.00, activator);
-		EntFire("personal_text", "Display", "", 0.01, activator);
-	}
-	if(activator==CONFUNDUSACT)
-	{
-		EntFire("!activator", "AddOutput", "origin 11458 9416 13614", 0.10, CONFUNDUSACT);
-		EntFire("personal_text", "SetText", "You already have ZM Item\nCONFUNDUS", 0.00, activator);
-		EntFire("personal_text", "Display", "", 0.01, activator);
-	}
-	if(activator==EMENDOACT)
-	{
-		EntFire("!activator", "AddOutput", "origin 11458 9416 13614", 0.10, EMENDOACT);
-		EntFire("personal_text", "SetText", "You already have ZM Item\nEMENDO", 0.00, activator);
-		EntFire("personal_text", "Display", "", 0.01, activator);
-	}
-	if(activator==ZMINCENDIOACT)
-	{
-		EntFire("!activator", "AddOutput", "origin 11458 9416 13614", 0.10, ZMINCENDIOACT);
-		EntFire("personal_text", "SetText", "You already have ZM Item\nZMINCENDIO", 0.00, activator);
-		EntFire("personal_text", "Display", "", 0.01, activator);
-	}
-	if(activator==DISILLUSIONMENTACT)
-	{
-		EntFire("!activator", "AddOutput", "origin 11458 9416 13614", 0.10, DISILLUSIONMENTACT);
-		EntFire("personal_text", "SetText", "You already have ZM Item\nDISILLUSIONMENT", 0.00, activator);
-		EntFire("personal_text", "Display", "", 0.01, activator);
-	}
-	if(activator==CONJUNCTIVITUSACT)
-	{
-		EntFire("!activator", "AddOutput", "origin 11458 9416 13614", 0.10, CONJUNCTIVITUSACT);
-		EntFire("personal_text", "SetText", "You already have ZM Item\nCONJUNCTIVITUS", 0.00, activator);
-		EntFire("personal_text", "Display", "", 0.01, activator);
-	}
-	if(activator==DELETRIUSACT)
-	{
-		EntFire("!activator", "AddOutput", "origin 11458 9416 13614", 0.10, DELETRIUSACT);
-		EntFire("personal_text", "SetText", "You already have ZM Item\nDELETRIUS", 0.00, activator);
-		EntFire("personal_text", "Display", "", 0.01, activator);
-	}
-	if(activator==REDUCIOACT)
-	{
-		EntFire("!activator", "AddOutput", "origin 11458 9416 13614", 0.10, REDUCIOACT);
-		EntFire("personal_text", "SetText", "You already have ZM Item\nREDUCIO", 0.00, activator);
-		EntFire("personal_text", "Display", "", 0.01, activator);
-	}
+    if(activator==EXPULSOACT)
+    {
+        EntFire("!activator", "AddOutput", "origin 11458 9416 13614", 0.10, EXPULSOACT);
+        EntFire("personal_text", "SetText", "You already have ZM Item\nEXPULSO", 0.00, activator);
+        EntFire("personal_text", "Display", "", 0.01, activator);
+    }
+    if(activator==DEPRIMOACT)
+    {
+        EntFire("!activator", "AddOutput", "origin 11458 9416 13614", 0.10, DEPRIMOACT);
+        EntFire("personal_text", "SetText", "You already have ZM Item\nDEPRIMO", 0.00, activator);
+        EntFire("personal_text", "Display", "", 0.01, activator);
+    }
+    if(activator==CONFUNDUSACT)
+    {
+        EntFire("!activator", "AddOutput", "origin 11458 9416 13614", 0.10, CONFUNDUSACT);
+        EntFire("personal_text", "SetText", "You already have ZM Item\nCONFUNDUS", 0.00, activator);
+        EntFire("personal_text", "Display", "", 0.01, activator);
+    }
+    if(activator==EMENDOACT)
+    {
+        EntFire("!activator", "AddOutput", "origin 11458 9416 13614", 0.10, EMENDOACT);
+        EntFire("personal_text", "SetText", "You already have ZM Item\nEMENDO", 0.00, activator);
+        EntFire("personal_text", "Display", "", 0.01, activator);
+    }
+    if(activator==ZMINCENDIOACT)
+    {
+        EntFire("!activator", "AddOutput", "origin 11458 9416 13614", 0.10, ZMINCENDIOACT);
+        EntFire("personal_text", "SetText", "You already have ZM Item\nZMINCENDIO", 0.00, activator);
+        EntFire("personal_text", "Display", "", 0.01, activator);
+    }
+    if(activator==DISILLUSIONMENTACT)
+    {
+        EntFire("!activator", "AddOutput", "origin 11458 9416 13614", 0.10, DISILLUSIONMENTACT);
+        EntFire("personal_text", "SetText", "You already have ZM Item\nDISILLUSIONMENT", 0.00, activator);
+        EntFire("personal_text", "Display", "", 0.01, activator);
+    }
+    if(activator==CONJUNCTIVITUSACT)
+    {
+        EntFire("!activator", "AddOutput", "origin 11458 9416 13614", 0.10, CONJUNCTIVITUSACT);
+        EntFire("personal_text", "SetText", "You already have ZM Item\nCONJUNCTIVITUS", 0.00, activator);
+        EntFire("personal_text", "Display", "", 0.01, activator);
+    }
+    if(activator==DELETRIUSACT)
+    {
+        EntFire("!activator", "AddOutput", "origin 11458 9416 13614", 0.10, DELETRIUSACT);
+        EntFire("personal_text", "SetText", "You already have ZM Item\nDELETRIUS", 0.00, activator);
+        EntFire("personal_text", "Display", "", 0.01, activator);
+    }
+    if(activator==REDUCIOACT)
+    {
+        EntFire("!activator", "AddOutput", "origin 11458 9416 13614", 0.10, REDUCIOACT);
+        EntFire("personal_text", "SetText", "You already have ZM Item\nREDUCIO", 0.00, activator);
+        EntFire("personal_text", "Display", "", 0.01, activator);
+    }
 }
 ////////////////////////////////
 /////Glow Invisible ZM//////////
@@ -3614,62 +3764,62 @@ Dz_GlowDelete_Allow<-true;
 ////////////////////////////////
 function Dz_Glow_Invisible_ZM()
 {
-	if(activator.GetTeam() == 2 && activator == DISILLUSIONMENTACT && ZOMBIE_ITEM_DISABLE)
+    if(activator.GetTeam() == 2 && activator == DISILLUSIONMENTACT && ZOMBIE_ITEM_DISABLE)
     { 
-		local zmsm = null;
-		while(null != (zmsm = Entities.FindByClassname(zmsm,"player")))
-		{
-			if(zmsm.GetTeam() == 2 && zmsm.GetHealth() > 0 && zmsm.IsValid())
-			{
-				local pos = zmsm.GetOrigin();
-				local posorig = "origin "+pos.x+" "+pos.y+" "+(pos.z+73);
-				EntFire("dzfix_PT_glowzm_invis","ForceSpawn","",0.00,null);
-				EntFire("dzfix_glowzm_invis","AddOutput",posorig,0.00,null);
-				EntFire("dzfix_glowzm_invis","SetParent","!activator",0.00,zmsm);
-				EntFire("dzfix_glowzm_invis","AddOutput","targetname dzfix_glowzm_USEDinvis",0.00,null);
-			}
-		}
-		if(Dz_GlowDelete_Allow==true)
-		{
-			EntFire("dzfix_glowzm_USEDinvis", "Kill", "", 10.00, null);
-		}
-	}
+        local zmsm = null;
+        while(null != (zmsm = Entities.FindByClassname(zmsm,"player")))
+        {
+            if(zmsm.GetTeam() == 2 && zmsm.GetHealth() > 0 && zmsm.IsValid())
+            {
+                local pos = zmsm.GetOrigin();
+                local posorig = "origin "+pos.x+" "+pos.y+" "+(pos.z+73);
+                EntFire("dzfix_PT_glowzm_invis","ForceSpawn","",0.00,null);
+                EntFire("dzfix_glowzm_invis","AddOutput",posorig,0.00,null);
+                EntFire("dzfix_glowzm_invis","SetParent","!activator",0.00,zmsm);
+                EntFire("dzfix_glowzm_invis","AddOutput","targetname dzfix_glowzm_USEDinvis",0.00,null);
+            }
+        }
+        if(Dz_GlowDelete_Allow==true)
+        {
+            EntFire("dzfix_glowzm_USEDinvis", "Kill", "", 10.00, null);
+        }
+    }
 }
 
 function Dz_Glow_ZM_Delete()
 {
-	Dz_repiter_Glow_ZM_Set=false;
-	Dz_GlowDelete_Allow=true;
-	EntFire("dzfix_glowzm_USEDinvis", "Kill", "", 0.00, null);
+    Dz_repiter_Glow_ZM_Set=false;
+    Dz_GlowDelete_Allow=true;
+    EntFire("dzfix_glowzm_USEDinvis", "Kill", "", 0.00, null);
 }
 
 Dz_repiter_Glow_ZM_Set<-false;
 
 function Dz_Glow_ZM_Set()
 {
-	Dz_repiter_Glow_ZM_Set=true;
-	EntFireByHandle(self,"RunScriptCode","Dz_Glow_ZM_Fucn_Set();",1.00,null,null);
+    Dz_repiter_Glow_ZM_Set=true;
+    EntFireByHandle(self,"RunScriptCode","Dz_Glow_ZM_Fucn_Set();",1.00,null,null);
 }
 
 function Dz_Glow_ZM_Fucn_Set()
 {
-	if(Dz_repiter_Glow_ZM_Set==true)
-	{
-		Dz_GlowDelete_Allow=false;
-		EntFire("dzfix_glowzm_USEDinvis", "Kill", "", 0.00, null);
-		local zmsm = null;
-		while((zmsm = Entities.FindByClassname(zmsm,"player")) != null)
-		{
-			if(zmsm.GetTeam() == 2 && zmsm.GetHealth() > 0 && zmsm.IsValid())
-			{
-				local pos = zmsm.GetOrigin();
-				local posorig = "origin "+pos.x+" "+pos.y+" "+(pos.z+73);
-				EntFire("dzfix_PT_glowzm_invis","ForceSpawn","",0.00,null);
-				EntFire("dzfix_glowzm_invis","AddOutput",posorig,0.00,null);
-				EntFire("dzfix_glowzm_invis","SetParent","!activator",0.00,zmsm);
-				EntFire("dzfix_glowzm_invis","AddOutput","targetname dzfix_glowzm_USEDinvis",0.00,null);
-			}
-		}
-		EntFireByHandle(self,"RunScriptCode","Dz_Glow_ZM_Fucn_Set();",5.00,null,null);
-	}
+    if(Dz_repiter_Glow_ZM_Set==true)
+    {
+        Dz_GlowDelete_Allow=false;
+        EntFire("dzfix_glowzm_USEDinvis", "Kill", "", 0.00, null);
+        local zmsm = null;
+        while((zmsm = Entities.FindByClassname(zmsm,"player")) != null)
+        {
+            if(zmsm.GetTeam() == 2 && zmsm.GetHealth() > 0 && zmsm.IsValid())
+            {
+                local pos = zmsm.GetOrigin();
+                local posorig = "origin "+pos.x+" "+pos.y+" "+(pos.z+73);
+                EntFire("dzfix_PT_glowzm_invis","ForceSpawn","",0.00,null);
+                EntFire("dzfix_glowzm_invis","AddOutput",posorig,0.00,null);
+                EntFire("dzfix_glowzm_invis","SetParent","!activator",0.00,zmsm);
+                EntFire("dzfix_glowzm_invis","AddOutput","targetname dzfix_glowzm_USEDinvis",0.00,null);
+            }
+        }
+        EntFireByHandle(self,"RunScriptCode","Dz_Glow_ZM_Fucn_Set();",5.00,null,null);
+    }
 }

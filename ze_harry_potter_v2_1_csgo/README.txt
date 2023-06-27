@@ -1,10 +1,14 @@
 !!!PLEASE ADD THE FOLLOWING LINE TO bspconvar_whitelist.txt:
 sm_setcooldown 1
-
+sm_ewsetshortname 1
+sm_ewsetmode 1
 
 >>This command changes the cooldown of Items in plugin EntWatch<<
 >>e.g.<<
 sm_setcooldown <hammerid> <cooldown>
+sm_ewsetshortname <hammerid> <newshortname>
+sm_ewsetmode <hammerid> <newmode> <cooldown> <maxuses> [<even if over>]
+
 
 >>If you use another command you can edit scripts/vscripts/harryk/item_c_hp_fix.nut<<
 >>or change the item mode in the config EntWatch<<
@@ -39,3 +43,8 @@ FIX:
 *Deletrius now stops avada and accio
 *Reducio gived ZM speed
 *Added knife rechanger
+<update 28 June 2023>
+*Fixed item particles on wands
+*Fixed Wall for speeder players on Stage 2/8
+*Entities for plugin StageRewards
+*Added commands for EntWatch

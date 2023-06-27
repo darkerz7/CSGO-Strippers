@@ -145,6 +145,7 @@ function MapStart()
 		EntFireByHandle(self,"RunScriptCode","WonLevel();",115.00,null,null);
 		EntFire("map_fixthis", "FireUser1", "", 115.00, null);
 	    EntFire("console", "Command", "say >>> STARTING THE MAP - HAVE FUN <<<", 116.00, null);
+		EntFire("plugin_map_rewards1", "Trigger", "", 116.00, null);
 	    EntFire("map_shake", "StartShake", "", 114.50, null);
 	    EntFire("map_zmfix_spawn", "Kill", "", 114.00, null);
 	    EntFire("map_zmfix_spawn", "Enable", "", 12.00, null);
@@ -350,6 +351,7 @@ function MapStart()
 		EntFire("new_check_delay_15", "Kill", "", 79.50, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stg1:Enable::0.60:1", 83.00, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 2 STAGE <<<:0.50:1", 82.00, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger plugin_map_rewards1:FireUser1::0.50:1", 82.00, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:1:0.30:1", 81.00, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stg1:Enable::0.30:1", 80.00, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin -7091 -942 12850", 7.50, null);
@@ -477,6 +479,7 @@ function MapStart()
 		EntFire("new_check_delay_15", "Kill", "", 79.50, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stg2:Enable::0.60:1", 83.00, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 3 STAGE <<<:0.50:1", 82.00, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger plugin_map_rewards1:FireUser2::0.50:1", 82.00, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:2:0.30:1", 81.00, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stg2:Enable::0.30:1", 80.00, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin 12896 2835 6121", 7.50, null);
@@ -740,6 +743,7 @@ function MapStart()
 		EntFire("new_check_delay_15", "Kill", "", 79.50, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stgZM:Enable::0.60:1", 83.00, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 4 STAGE <<<:0.50:1", 82.00, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger plugin_map_rewards1:FireUser3::0.50:1", 82.00, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:3:0.30:1", 81.00, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stgZM:Enable::0.30:1", 80.00, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin 11789 -3461 -7304", 7.50, null);
@@ -856,6 +860,7 @@ function MapStart()
 		EntFire("new_check_delay_15", "Kill", "", 79.5, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stg3:Enable::0.60:1", 83, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 5 STAGE <<<:0.50:1", 82, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger plugin_map_rewards1:FireUser4::0.50:1", 82.00, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:4:0.30:1", 81, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stg3:Enable::0.30:1", 80, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin -11885 -5496 1776", 7.5, null);
@@ -1012,6 +1017,7 @@ function MapStart()
 		EntFire("new_check_delay_15", "Kill", "", 79.5, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stg4:Enable::0.60:1", 83, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 6 STAGE <<<:0.50:1", 82, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger plugin_map_rewards2:Trigger::0.50:1", 82.00, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:5:0.30:1", 81, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stg4:Enable::0.30:1", 80, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin -13604 1671 -10059", 7.5, null);
@@ -1169,6 +1175,7 @@ function MapStart()
 		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING EXTREME MODE <<<:0.60:1", 85, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stg5:Enable::0.60:1", 84, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> NORMAL MODE COMPLETE <<<:0.50:1", 83, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger plugin_map_rewards2:FireUser1::0.50:1", 83.00, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:6:0.30:1", 82, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger world:FireUser4::0.20:1", 81, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stg5:Enable::0.30:1", 80, null);
@@ -1308,6 +1315,7 @@ function MapStart()
 		EntFire("new_check_delay_20", "Kill", "", 79.5, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stg1:Enable::0.60:1", 83, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 8 STAGE <<<:0.50:1", 82, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger plugin_map_rewards2:FireUser2::0.50:1", 82.00, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:1:0.30:1", 81, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stg1:Enable::0.30:1", 80, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin -7091 -942 12850", 7.5, null);
@@ -1439,6 +1447,7 @@ function MapStart()
 		EntFire("new_check_delay_20", "Kill", "", 79.5, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stg2:Enable::0.60:1", 83, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 9 STAGE <<<:0.50:1", 82, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger plugin_map_rewards2:FireUser3::0.50:1", 82.00, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:2:0.30:1", 81, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stg2:Enable::0.30:1", 80, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin 12896 2835 6121", 7.5, null);
@@ -1674,6 +1683,7 @@ function MapStart()
 		EntFire("new_check_delay_20", "Kill", "", 79.5, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stgZM:Enable::0.60:1", 83, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 10 STAGE <<<:0.50:1", 82, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger plugin_map_rewards2:FireUser4::0.50:1", 82.00, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:3:0.30:1", 81, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stgZM:Enable::0.30:1", 80, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin 11789 -3461 -7304", 7.5, null);
@@ -1814,6 +1824,7 @@ function MapStart()
 		EntFire("new_check_delay_20", "Kill", "", 79.5, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stg3:Enable::0.60:1", 83, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 11 STAGE <<<:0.50:1", 82, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger plugin_map_rewards3:Trigger::0.50:1", 82.00, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:4:0.30:1", 81, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stg3:Enable::0.30:1", 80, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin -11885 -5496 1776", 7.5, null);
@@ -1945,6 +1956,7 @@ function MapStart()
 		EntFire("new_check_delay_20", "Kill", "", 79.5, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stg4:Enable::0.60:1", 83, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ACTIVATING 12 STAGE <<<:0.50:1", 82, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger plugin_map_rewards3:FireUser1::0.50:1", 82.00, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:5:0.30:1", 81, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stg4:Enable::0.30:1", 80, null);
 		EntFire("spx_owl_nade", "AddOutput", "origin -13604 1671 -10059", 7.5, null);
@@ -2100,6 +2112,7 @@ function MapStart()
 		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> THANKS FOR PLAYING THIS MAP <<<:0.60:1", 85, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger map_nuke_stg5:Enable::0.60:1", 84, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger console:Command:say >>> ALL STAGES COMPLETE - RESETTING MAP <<<:0.50:1", 83, null);
+		EntFire("new_check_relay", "AddOutput", "OnTrigger plugin_map_rewards3:FireUser2::0.50:1", 83.00, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger new_check_case_stg:InValue:7:0.30:1", 82, null);
 		EntFire("new_check_relay", "AddOutput", "OnTrigger world:FireUser4::0.20:1", 81, null);
 		EntFire("new_check_delay_*", "AddOutput", "OnTrigger map_nuke_stg5:Enable::0.30:1", 80, null);
@@ -2211,6 +2224,7 @@ function MapStart()
 		EntFire("mapx_x_fly*", "Kill", "", 79, null);
 		EntFire("map_fly*", "Kill", "", 79, null);
 		EntFire("console", "Command", "say >>> RESETTING MAP <<<", 99, null);
+		EntFire("plugin_map_rewards3", "FireUser3", "", 98.50, null);
 		EntFire("map_hint_hidstg", "AddOutput", "message 30 SECONDS LEFT", 51.5, null);
 		EntFire("console", "Command", "say >>> CREATION BY SKULLZ AND DEVIOUS <<<", 98.4, null);
 		EntFire("map_knifefix_*", "Kill", "", 3.2, null);
